@@ -45,121 +45,122 @@ const moreNavItems = [{
 }];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [moreOpen, setMoreOpen] = useState(false);
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
-  return <motion.header initial={{
-    y: -100
-  }} animate={{
-    y: 0
-  }} transition={{
-    duration: 0.6,
-    ease: 'easeOut'
-  }} className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50">
-    <nav className="container-custom">
-      <div className="flex items-center justify-between h-16 lg:h-20">
-        {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
-          <img src={seal} alt="Seal" className="h-10 w-auto" />
-          <span className="font-display font-bold text-lg text-foreground hidden sm:block">
-            Innovora<span className="text-gradient">Mind</span>
-          </span>
-        </Link>
 
-        {/* Desktop Navigation */}
-        <div className="hidden xl:flex items-center gap-1">
-          {mainNavItems.map(item => <Link key={item.path} to={item.path} className={`nav-link ${isActive(item.path) ? 'text-secondary font-semibold' : 'text-foreground/80 hover:text-foreground'}`}>
-            {item.label}
-          </Link>)}
+  // Combine all items for the menu
+  const allNavItems = [...mainNavItems, ...moreNavItems];
 
-          {/* More Dropdown */}
-          <div className="relative" onMouseEnter={() => setMoreOpen(true)} onMouseLeave={() => setMoreOpen(false)}>
-            <button className="nav-link flex items-center gap-1 text-foreground/80 hover:text-foreground">
-              More
-              <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${moreOpen ? 'rotate-180' : ''}`} />
+  return (
+    <>
+      <motion.header
+        initial={{ y: -100 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50"
+      >
+        <nav className="container-custom">
+          <div className="flex items-center justify-between h-16 lg:h-20">
+            {/* Logo */}
+            <Link to="/" className="flex items-center gap-2 group z-50 relative">
+              <img src={seal} alt="Seal" className="h-10 w-auto" />
+              <span className="font-display font-bold text-lg text-foreground hidden sm:block">
+                Innovora<span className="text-gradient">Mind</span>
+              </span>
+            </Link>
+
+            {/* Hamburger Button */}
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 rounded-full hover:bg-muted transition-colors z-50 relative group"
+              aria-label="Toggle Menu"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center gap-1.5">
+                <motion.span
+                  animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
+                  className="w-6 h-0.5 bg-foreground block transition-transform origin-center"
+                />
+                <motion.span
+                  animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
+                  className="w-4 h-0.5 bg-foreground block transition-opacity group-hover:w-6"
+                />
+                <motion.span
+                  animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
+                  className="w-6 h-0.5 bg-foreground block transition-transform origin-center"
+                />
+              </div>
             </button>
-
-            <AnimatePresence>
-              {moreOpen && <motion.div initial={{
-                opacity: 0,
-                y: 10,
-                scale: 0.95
-              }} animate={{
-                opacity: 1,
-                y: 0,
-                scale: 1
-              }} exit={{
-                opacity: 0,
-                y: 10,
-                scale: 0.95
-              }} transition={{
-                duration: 0.2
-              }} className="absolute top-full right-0 mt-2 w-48 glass rounded-xl shadow-xl border border-border/50 overflow-hidden">
-                {moreNavItems.map(item => <Link key={item.path} to={item.path} className={`block px-4 py-3 text-sm transition-colors ${isActive(item.path) ? 'bg-secondary/10 text-secondary font-medium' : 'text-foreground/80 hover:bg-muted hover:text-foreground'}`}>
-                  {item.label}
-                </Link>)}
-              </motion.div>}
-            </AnimatePresence>
           </div>
-        </div>
+        </nav>
+      </motion.header>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex items-center gap-4">
-          <Button asChild variant="default" className="bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold px-6">
-            <Link to="/registrations">Register Now</Link>
-          </Button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button onClick={() => setIsOpen(!isOpen)} className="xl:hidden p-2 rounded-lg hover:bg-muted transition-colors">
-          {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
+      {/* Full Screen Menu Dropdown */}
       <AnimatePresence>
-        {isOpen && <motion.div initial={{
-          opacity: 0,
-          height: 0
-        }} animate={{
-          opacity: 1,
-          height: 'auto'
-        }} exit={{
-          opacity: 0,
-          height: 0
-        }} transition={{
-          duration: 0.3
-        }} className="xl:hidden overflow-hidden border-t border-border/50">
-          <div className="py-4 space-y-1">
-            {[...mainNavItems, ...moreNavItems].map((item, index) => <motion.div key={item.path} initial={{
-              opacity: 0,
-              x: -20
-            }} animate={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              delay: index * 0.05
-            }}>
-              <Link to={item.path} onClick={() => setIsOpen(false)} className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive(item.path) ? 'bg-secondary/10 text-secondary' : 'text-foreground/80 hover:bg-muted hover:text-foreground'}`}>
-                {item.label}
-              </Link>
-            </motion.div>)}
-            <motion.div initial={{
-              opacity: 0,
-              x: -20
-            }} animate={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              delay: 0.6
-            }} className="pt-4 px-4">
-              <Button asChild className="w-full bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold">
-                <Link to="/registrations" onClick={() => setIsOpen(false)}>Register Now</Link>
-              </Button>
-            </motion.div>
-          </div>
-        </motion.div>}
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+            animate={{ opacity: 1, clipPath: "circle(150% at 100% 0%)" }}
+            exit={{ opacity: 0, clipPath: "circle(0% at 100% 0%)" }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="fixed inset-0 bg-background/95 backdrop-blur-xl z-40 flex flex-col pt-24 px-6 md:px-12"
+          >
+            <div className="container-custom max-w-5xl h-full overflow-y-auto custom-scrollbar">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-10">
+                {/* Navigation Links Column */}
+                <div className="space-y-6 md:col-span-2">
+                  <h3 className="text-muted-foreground text-sm font-semibold tracking-wider uppercase mb-4">Navigation</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
+                    {allNavItems.map((item, index) => (
+                      <motion.div
+                        key={item.path}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 + index * 0.05 }}
+                      >
+                        <Link
+                          to={item.path}
+                          onClick={() => setIsOpen(false)}
+                          className={`text-lg md:text-xl font-medium transition-colors hover:text-primary flex items-center gap-3 group ${isActive(item.path) ? 'text-secondary' : 'text-foreground/80'}`}
+                        >
+                          <span className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${isActive(item.path) ? 'bg-secondary' : 'bg-transparent group-hover:bg-primary'}`} />
+                          {item.label}
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA and Info Column */}
+                <div className="space-y-8">
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.4 }}
+                  >
+                    <h3 className="text-muted-foreground text-sm font-semibold tracking-wider uppercase mb-4">Action</h3>
+                    <Button asChild className="w-full bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold py-6 text-lg shadow-lg hover:shadow-xl transition-all">
+                      <Link to="/registrations" onClick={() => setIsOpen(false)}>Register Now</Link>
+                    </Button>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.5 }}
+                    className="p-6 bg-secondary/5 rounded-2xl border border-secondary/10"
+                  >
+                    <p className="text-foreground/80 font-medium mb-2">Have questions?</p>
+                    <p className="text-sm text-muted-foreground mb-4">Contact our team for support regarding conferences, publications, or partnerships.</p>
+                    <Link to="/contact" onClick={() => setIsOpen(false)} className="text-secondary font-semibold hover:underline">
+                      Get in touch &toea;
+                    </Link>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
       </AnimatePresence>
-    </nav>
-  </motion.header>;
+    </>
+  );
 };
