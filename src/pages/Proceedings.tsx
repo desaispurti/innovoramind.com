@@ -42,10 +42,10 @@ const Proceedings = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Conference <span className="text-gradient">Proceedings</span>
+              Conference <span className="text-gradient">Video Vault</span>
             </h1>
             <p className="text-xl text-primary-foreground/70 mb-8">
-              Access peer-reviewed research papers and watch recorded sessions from our past conferences.
+              Watch recorded sessions, keynotes, and technical presentations from our past international conferences.
             </p>
             <div className="max-w-xl mx-auto relative">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
@@ -63,10 +63,10 @@ const Proceedings = () => {
         <div className="container-custom">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '2,500+', label: 'Published Papers' },
-              { value: '850+', label: 'Contributing Authors' },
-              { value: '45+', label: 'Conference Volumes' },
-              { value: '120K+', label: 'Downloads' },
+              { value: '500+', label: 'Recorded Sessions' },
+              { value: '45+', label: 'Global Summits' },
+              { value: '12+', label: 'Speaker Tracks' },
+              { value: '50K+', label: 'Session Views' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
