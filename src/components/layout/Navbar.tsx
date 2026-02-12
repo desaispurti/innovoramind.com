@@ -14,10 +14,10 @@ const mainNavItems = [{
 }, {
   label: 'Upcoming Conferences',
   path: '/upcoming-conferences'
-}, {
+}, /* {
   label: 'Recent Conferences',
   path: '/recent-conferences'
-}, {
+}, */ {
   label: 'Proceedings',
   path: '/proceedings'
 }, {

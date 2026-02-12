@@ -4,10 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { Calendar, MapPin, Globe, User, Users, ArrowRight, CheckCircle } from 'lucide-react';
 
-import nadiaAdnan from '@/assets/speakers/nadia-adnan.png';
-import ranaElKhawand from '@/assets/speakers/rana-el-khawand.png';
+// import nadiaAdnan from '@/assets/speakers/nadia-adnan.png';
+// import ranaElKhawand from '@/assets/speakers/rana-el-khawand.png';
 import walidaOunruean from '@/assets/advisors/advisor-1.png';
-import tianshengYang from '@/assets/speakers/tiansheng-yang.png';
+// import tianshengYang from '@/assets/speakers/tiansheng-yang.png';
 
 const speakers = [
     {
@@ -15,14 +15,14 @@ const speakers = [
         role: 'Assistant Professor & Research Scientist',
         department: 'Management and Marketing',
         institution: 'Prince Mohammad Bin Fahd University, Saudi Arabia',
-        image: nadiaAdnan
+        image: '/speakers/nadia-adnan.png'
     },
     {
         name: 'Dr. Ranà El Khawand',
         role: 'Technical Expert',
         department: 'Saida Risk Mapping Project',
         institution: '(UN-Habitat)',
-        image: ranaElKhawand
+        image: '/speakers/rana-el-khawand.png'
     },
     {
         name: 'Dr. Walida Ounruean',
@@ -36,7 +36,7 @@ const speakers = [
         role: 'Senior Lecturer',
         department: 'School of Computing and Mathematics',
         institution: 'University of South Wales, United Kingdom',
-        image: tianshengYang
+        image: '/speakers/tiansheng-yang.png'
     }
 ];
 

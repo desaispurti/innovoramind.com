@@ -1,0 +1,85 @@
+﻿
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+[36mvite v5.4.19 [32mbuilding for production...[36m[39m
+transforming...
+node.exe : Browserslist: 
+browsers data 
+(caniuse-lite) is 8 months 
+old. Please run:
+At line:1 char:1
++ & 
+"C:\nvm4w\nodejs/node.exe" "
+C:\nvm4w\nodejs/node_modules
+/npm/bin/np ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~
+    + CategoryInfo          
+    : NotSpecified: (Brows  
+  erslist: b...ld. Please   
+  run::String) [], Remot    
+eException
+    + FullyQualifiedErrorId 
+    : NativeCommandError
+ 
+  npx update-browserslist-db
+@latest
+  Why you should do it 
+regularly: https://github.co
+m/browserslist/update-db#rea
+dme
+[32mΓ£ô[39m 1706 modules transformed.
+[31mx[39m Build failed in 
+20.65s
+[31merror during build:
+[31m[vite:asset] Could not 
+load C:\Users\Aarav Computer
+\Desktop\innovoramind.com\in
+novoramind.com\src/assets/sp
+eakers/nadia-adnan.png 
+(imported by src/pages/confe
+rences/ICDMS26.tsx): 
+ENOENT: no such file or 
+directory, open 
+'C:\Users\Aarav Computer\Des
+ktop\innovoramind.com\innovo
+ramind.com\src\assets\speake
+rs\nadia-adnan.png'[31m
+    at async open (node:inte
+rnal/fs/promises:641:25)
+    at async 
+Object.readFile (node:intern
+al/fs/promises:1245:14)
+    at async fileToBuiltUrl 
+(file:///C:/Users/Aarav%20Co
+mputer/Desktop/innovoramind.
+com/innovoramind.com/node_mo
+dules/vite/dist/node/chunks/
+dep-C6uTJdX2.js:20428:19)
+    at async Object.load (fi
+le:///C:/Users/Aarav%20Compu
+ter/Desktop/innovoramind.com
+/innovoramind.com/node_modul
+es/vite/dist/node/chunks/dep
+-C6uTJdX2.js:20328:17)
+    at async PluginDriver.ho
+okFirstAndGetPlugin (file://
+/C:/Users/Aarav%20Computer/D
+esktop/innovoramind.com/inno
+voramind.com/node_modules/ro
+llup/dist/es/shared/node-ent
+ry.js:20630:28)
+    at async file:///C:/User
+s/Aarav%20Computer/Desktop/i
+nnovoramind.com/innovoramind
+.com/node_modules/rollup/dis
+t/es/shared/node-entry.js:19
+750:33
+    at async Queue.work (fil
+e:///C:/Users/Aarav%20Comput
+er/Desktop/innovoramind.com/
+innovoramind.com/node_module
+s/rollup/dist/es/shared/node
+-entry.js:20840:32)[39m

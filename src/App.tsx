@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import InnovationChallenge from "./pages/InnovationChallenge";
 import UpcomingConferences from "./pages/UpcomingConferences";
-import RecentConferences from "./pages/RecentConferences";
+// import RecentConferences from "./pages/RecentConferences";
 import Proceedings from "./pages/Proceedings";
 import PastSpeakers from "./pages/PastSpeakers";
 import AdvisorySpeakers from "./pages/AdvisorySpeakers";
@@ -31,7 +31,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/innovation-challenge" element={<InnovationChallenge />} />
           <Route path="/upcoming-conferences" element={<UpcomingConferences />} />
-          <Route path="/recent-conferences" element={<RecentConferences />} />
+          {/* <Route path="/recent-conferences" element={<RecentConferences />} /> */}
           <Route path="/proceedings" element={<Proceedings />} />
           <Route path="/past-speakers" element={<PastSpeakers />} />
           <Route path="/advisory-speakers" element={<AdvisorySpeakers />} />
