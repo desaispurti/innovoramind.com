@@ -17,6 +17,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ICDMS26 from "./pages/conferences/ICDMS26";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/innovation-challenge" element={<InnovationChallenge />} />

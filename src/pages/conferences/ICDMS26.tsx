@@ -15,14 +15,14 @@ const speakers = [
         role: 'Assistant Professor & Research Scientist',
         department: 'Management and Marketing',
         institution: 'Prince Mohammad Bin Fahd University, Saudi Arabia',
-        image: '/speakers/nadia-adnan.png'
+        image: '/speakers/nadia.png'
     },
     {
         name: 'Dr. Ranà El Khawand',
         role: 'Technical Expert',
         department: 'Saida Risk Mapping Project',
         institution: '(UN-Habitat)',
-        image: '/speakers/rana-el-khawand.png'
+        image: '/speakers/Dr. Ranà El Khawand.png'
     },
     {
         name: 'Dr. Walida Ounruean',
@@ -36,7 +36,7 @@ const speakers = [
         role: 'Senior Lecturer',
         department: 'School of Computing and Mathematics',
         institution: 'University of South Wales, United Kingdom',
-        image: '/speakers/tiansheng-yang.png'
+        image: '/speakers/Dr. Tiansheng Yang.png'
     }
 ];
 
@@ -59,6 +59,7 @@ const ICDMS26 = () => {
                         src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop"
                         alt="Conference Background"
                         className="w-full h-full object-cover"
+                        loading="lazy"
                     />
                     <div className="absolute inset-0 bg-background/90 mix-blend-multiply" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
@@ -151,6 +152,7 @@ const ICDMS26 = () => {
                                     src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
                                     alt="Conference Discussion"
                                     className="w-full h-full object-cover"
+                                    loading="lazy"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                             </div>
@@ -200,6 +202,7 @@ const ICDMS26 = () => {
                                             src={speaker.image}
                                             alt={speaker.name}
                                             className="w-full h-full object-cover"
+                                            loading="lazy"
                                         />
                                     ) : (
                                         <User className="w-12 h-12 text-muted-foreground/50" />

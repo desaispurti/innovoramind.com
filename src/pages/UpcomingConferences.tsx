@@ -132,6 +132,7 @@ const UpcomingConferences = () => {
                       src={conf.image}
                       alt={conf.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold">
