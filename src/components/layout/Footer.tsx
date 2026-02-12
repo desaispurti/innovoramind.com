@@ -27,7 +27,8 @@ export const Footer = () => {
               <div className="text-xs text-primary-foreground/60 leading-relaxed">
                 <p className="font-semibold text-primary-foreground/80">InnovoraMind LLC</p>
                 <p>ISO 9001:2015 | ISO/IEC 27001:2022</p>
-                <p>New Mexico LLC Formation</p>
+                <p>1209 Mountain Road Pl NE, Ste H</p>
+                <p>Albuquerque, NM 87110, USA</p>
               </div>
             </div>
             <div className="flex gap-4">
@@ -87,20 +88,14 @@ export const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
                 <span className="text-primary-foreground/70 text-sm">
-                  123 Innovation Drive, Suite 500<br />
-                  San Francisco, CA 94105, USA
+                  1209 Mountain Road Pl NE, Ste H<br />
+                  Albuquerque, NM 87110, USA
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="mailto:info@innovoramind.com" className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm">
-                  info@innovoramind.com
-                </a>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="tel:+14155551234" className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm">
-                  +1 (415) 555-1234
+                <a href="mailto:Events@innovoramind.com" className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm">
+                  Events@innovoramind.com
                 </a>
               </li>
             </ul>
