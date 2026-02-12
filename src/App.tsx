@@ -8,7 +8,7 @@ import InnovationChallenge from "./pages/InnovationChallenge";
 import UpcomingConferences from "./pages/UpcomingConferences";
 // import RecentConferences from "./pages/RecentConferences";
 import Proceedings from "./pages/Proceedings";
-import PastSpeakers from "./pages/PastSpeakers";
+// import PastSpeakers from "./pages/PastSpeakers";
 import AdvisorySpeakers from "./pages/AdvisorySpeakers";
 import Registrations from "./pages/Registrations";
 import Books from "./pages/Books";
@@ -35,7 +35,7 @@ const App = () => (
           <Route path="/upcoming-conferences" element={<UpcomingConferences />} />
           {/* <Route path="/recent-conferences" element={<RecentConferences />} /> */}
           <Route path="/proceedings" element={<Proceedings />} />
-          <Route path="/past-speakers" element={<PastSpeakers />} />
+          {/* <Route path="/past-speakers" element={<PastSpeakers />} /> */}
           <Route path="/advisory-speakers" element={<AdvisorySpeakers />} />
           <Route path="/registrations" element={<Registrations />} />
           <Route path="/books" element={<Books />} />

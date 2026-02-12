@@ -20,10 +20,10 @@ const mainNavItems = [{
 }, */ {
   label: 'Proceedings',
   path: '/proceedings'
-}, {
+}, /* {
   label: 'Past Speakers',
   path: '/past-speakers'
-}, {
+}, */ {
   label: 'Advisory Speakers',
   path: '/advisory-speakers'
 }, {
