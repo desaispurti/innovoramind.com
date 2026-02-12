@@ -11,12 +11,13 @@ import Proceedings from "./pages/Proceedings";
 // import PastSpeakers from "./pages/PastSpeakers";
 import AdvisorySpeakers from "./pages/AdvisorySpeakers";
 import Registrations from "./pages/Registrations";
-import Books from "./pages/Books";
-import ShareYourStory from "./pages/ShareYourStory";
+import Mentorship from "./pages/Mentorship";
+import TechInnovation from "./pages/TechInnovation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ICDMS26 from "./pages/conferences/ICDMS26";
+import VideoConferenceView from "./pages/VideoConferenceView";
 import { ScrollToTop } from "./components/ScrollToTop";
 
 
@@ -38,11 +39,12 @@ const App = () => (
           {/* <Route path="/past-speakers" element={<PastSpeakers />} /> */}
           <Route path="/advisory-speakers" element={<AdvisorySpeakers />} />
           <Route path="/registrations" element={<Registrations />} />
-          <Route path="/books" element={<Books />} />
-          <Route path="/share-your-story" element={<ShareYourStory />} />
+          <Route path="/mentorship" element={<Mentorship />} />
+          <Route path="/tech-innovation" element={<TechInnovation />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/conferences/icdms-26" element={<ICDMS26 />} />
+          <Route path="/proceedings/:id" element={<VideoConferenceView />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

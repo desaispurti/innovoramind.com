@@ -31,11 +31,11 @@ const mainNavItems = [{
   path: '/registrations'
 }];
 const moreNavItems = [{
-  label: 'Books',
-  path: '/books'
+  label: 'Mentorship',
+  path: '/mentorship'
 }, {
-  label: 'Share Your Story',
-  path: '/share-your-story'
+  label: 'Tech Innovation',
+  path: '/tech-innovation'
 }, {
   label: 'About Us',
   path: '/about'
