@@ -16,6 +16,8 @@ import ShareYourStory from "./pages/ShareYourStory";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ICDMS26 from "./pages/conferences/ICDMS26";
+
 
 const queryClient = new QueryClient();
 
@@ -38,6 +40,7 @@ const App = () => (
           <Route path="/share-your-story" element={<ShareYourStory />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/conferences/icdms-26" element={<ICDMS26 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
