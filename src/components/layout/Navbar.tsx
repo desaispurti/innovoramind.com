@@ -10,6 +10,9 @@ const mainNavItems = [{
   label: 'Home',
   path: '/'
 }, {
+  label: 'Services',
+  path: '/services'
+}, {
   label: 'Solutions',
   path: '/solutions'
 }, {
