@@ -51,7 +51,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Upcoming Conferences', /* 'Past Speakers', */ 'Proceedings', 'Registrations', 'Innovation Challenge'].map((item) => (
+              {['Solutions', 'Proceedings', 'Registrations', 'Funding & Grants'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(/ /g, '-')}`}
@@ -68,7 +68,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Resources</h4>
             <ul className="space-y-3">
-              {['Mentorship', 'Tech Innovation', 'About Us', 'Contact', 'Advisory Speakers'].map((item) => (
+              {['Mentorship', 'Tech Innovation', 'About Us', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(/ /g, '-')}`}

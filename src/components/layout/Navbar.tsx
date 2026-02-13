@@ -9,23 +9,14 @@ const mainNavItems = [{
   label: 'Home',
   path: '/'
 }, {
-  label: 'Innovation Challenge',
-  path: '/innovation-challenge'
+  label: 'Solutions',
+  path: '/solutions'
 }, {
-  label: 'Upcoming Conferences',
-  path: '/upcoming-conferences'
-}, /* {
-  label: 'Recent Conferences',
-  path: '/recent-conferences'
-}, */ {
+  label: 'Funding & Grants',
+  path: '/funding-grants'
+}, {
   label: 'Proceedings',
   path: '/proceedings'
-}, /* {
-  label: 'Past Speakers',
-  path: '/past-speakers'
-}, */ {
-  label: 'Advisory Speakers',
-  path: '/advisory-speakers'
 }, {
   label: 'Registrations',
   path: '/registrations'
@@ -65,7 +56,7 @@ export const Navbar = () => {
             <Link to="/" className="flex items-center gap-2 group z-50 relative">
               <img src={seal} alt="Seal" className="h-10 w-auto" />
               <span className="font-display font-bold text-lg text-foreground hidden sm:block">
-                Innovora<span className="text-gradient">Mind</span>
+                Innovora<span className="text-gradient">Mind LLC</span>
               </span>
             </Link>
 

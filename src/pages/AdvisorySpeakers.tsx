@@ -1,15 +1,16 @@
-import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
-import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
-import { GraduationCap } from 'lucide-react';
+// import { motion } from 'framer-motion';
+// import { Button } from '@/components/ui/button';
+// import { Link } from 'react-router-dom';
+// import { GraduationCap } from 'lucide-react';
 
-import advisor1 from '@/assets/advisors/advisor-1.png';
-import advisor2 from '@/assets/advisors/advisor-2.png';
-import advisor3 from '@/assets/advisors/advisor-3.png';
-import advisor4 from '@/assets/advisors/advisor-4.png';
-import advisor5 from '@/assets/advisors/advisor-5.png';
+// import advisor1 from '@/assets/advisors/advisor-1.png';
+// import advisor2 from '@/assets/advisors/advisor-2.png';
+// import advisor3 from '@/assets/advisors/advisor-3.png';
+// import advisor4 from '@/assets/advisors/advisor-4.png';
+// import advisor5 from '@/assets/advisors/advisor-5.png';
 
+/*
 const advisors = [
   {
     name: 'Dr. Joe Perez',
@@ -37,11 +38,13 @@ const advisors = [
     image: advisor4,
   },
 ];
+*/
 
 const AdvisorySpeakers = () => {
+  return null;
+  /*
   return (
     <Layout>
-      {/* Hero */}
       <section className="hero-gradient py-20 lg:py-28">
         <div className="container-custom">
           <motion.div
@@ -60,7 +63,6 @@ const AdvisorySpeakers = () => {
         </div>
       </section>
 
-      {/* Advisors Grid */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
@@ -98,7 +100,6 @@ const AdvisorySpeakers = () => {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="section-padding bg-muted/50">
         <div className="container-custom">
           <motion.div
@@ -121,6 +122,7 @@ const AdvisorySpeakers = () => {
       </section>
     </Layout>
   );
+  */
 };
 
 export default AdvisorySpeakers;

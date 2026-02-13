@@ -1,28 +1,25 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Calendar, MapPin, ArrowRight, Users } from 'lucide-react';
+import { MapPin, ArrowRight, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const upcomingEvents = [
   {
-    title: 'ICDMS-26: Digital Management & AI Science',
-    date: 'February 22, 2026',
+    title: 'Cognitive Computing & Advanced AI Systems',
     location: 'Singapore | Hybrid',
     attendees: '2,500+',
     image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop',
     category: 'Artificial Intelligence',
   },
   {
-    title: 'ICGBIS-26: Global Tech & Business Strategy',
-    date: 'March 15-17, 2026',
+    title: 'DevOps & Scalable Software Architecture',
     location: 'Hybrid Mode',
     attendees: '3,000+',
     image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop',
     category: 'Software Engineering',
   },
   {
-    title: 'ICDTIS-26: IT Transformation & Innovation',
-    date: 'April 8-10, 2026',
+    title: 'Cloud-Native Infrastructure & IT Security',
     location: 'Hybrid Mode',
     attendees: '4,000+',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop',
@@ -43,18 +40,18 @@ export const UpcomingEventsSection = () => {
         >
           <div>
             <span className="inline-block px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-semibold mb-4">
-              Don't Miss Out
+              Innovating Tomorrow
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
-              Upcoming Conferences
+              Strategic Tech Series
             </h2>
           </div>
-          <Button asChild variant="outline" className="group">
+          {/* <Button asChild variant="outline" className="group">
             <Link to="/upcoming-conferences">
               View All Events
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
-          </Button>
+          </Button> */}
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -81,25 +78,21 @@ export const UpcomingEventsSection = () => {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-display text-xl font-bold text-foreground mb-4 group-hover:text-secondary transition-colors">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">
                     {event.title}
                   </h3>
                   <div className="space-y-2 mb-4">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="w-4 h-4 text-secondary" />
-                      {event.date}
-                    </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <MapPin className="w-4 h-4 text-secondary" />
                       {event.location}
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Users className="w-4 h-4 text-secondary" />
-                      {event.attendees} Expected Attendees
+                      {event.attendees} Expected Participants
                     </div>
                   </div>
                   <Button asChild className="w-full bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-secondary-foreground font-semibold">
-                    <Link to="/registrations">Register Now</Link>
+                    <Link to="/contact">Express Interest</Link>
                   </Button>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
 import { Target, Eye } from 'lucide-react';
+import certificateImg from '@/assets/certificate.png';
 
 const About = () => {
   return (
@@ -30,31 +31,69 @@ const About = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="section-padding bg-background">
+      <section className="section-padding bg-background relative overflow-hidden">
         <div className="container-custom">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto space-y-8"
-          >
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8">
-              Who We Are
-            </h2>
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8">
+                Who We Are
+              </h2>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              InnovoraMind is a professionally driven academic and research-focused platform established to support researchers, academicians, scholars, and institutions across multidisciplinary domains. We operate at the intersection of research quality, innovation, and structured academic growth.
-            </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                InnovoraMind is a professionally driven academic and research-focused platform established to support researchers, academicians, scholars, and institutions across multidisciplinary domains. We operate at the intersection of research quality, innovation, and structured academic growth.
+              </p>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Our core activities include facilitating high-impact research publications, organizing national and international academic conferences, providing expert thesis and research consultation, and supporting institutions in strengthening their research culture and global academic presence. We emphasize ethical research practices, clarity in scholarly communication, and long-term academic value.
-            </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Our core activities include facilitating high-impact research publications, organizing national and international academic conferences, providing expert thesis and research consultation, and supporting institutions in strengthening their research culture and global academic presence.
+              </p>
 
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Through collaborative networks and structured processes, InnovoraMind aims to simplify complex academic workflows while maintaining rigor, transparency, and international standards.
-            </p>
-          </motion.div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Through collaborative networks and structured processes, InnovoraMind aims to simplify complex academic workflows while maintaining rigor, transparency, and international standards.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, rotate: -2 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, type: "spring", bounce: 0.4 }}
+              className="relative group max-w-sm mx-auto"
+            >
+              {/* Decorative Frame */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-secondary/20 to-accent/20 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-100 transition-opacity duration-500" />
+
+              <div className="relative bg-white p-3 rounded-2xl shadow-2xl border border-border overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/10 pointer-events-none" />
+                <img
+                  src={certificateImg}
+                  alt="Certificate of Organization"
+                  className="w-full h-auto rounded-lg shadow-inner group-hover:scale-[1.02] transition-transform duration-700"
+                />
+
+                {/* Certificate Ribbon Seal Element */}
+                <div className="absolute bottom-6 right-6 w-16 h-16 opacity-20 group-hover:opacity-40 transition-opacity">
+                  <div className="absolute inset-0 border-4 border-dotted border-secondary rounded-full animate-[spin_20s_linear_infinite]" />
+                </div>
+              </div>
+
+              {/* Caption */}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 }}
+                className="mt-6 text-center"
+              >
+                <p className="text-sm font-semibold text-secondary uppercase tracking-[0.2em]">Verified Entity</p>
+                <p className="text-xs text-muted-foreground mt-1 underline decoration-secondary/30">Certificate of Organization • State of New Mexico</p>
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

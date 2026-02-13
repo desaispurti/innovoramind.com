@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Play, Calendar, Users, Globe2 } from 'lucide-react';
+import { ArrowRight, Play, Calendar, Users, Globe2, Cpu, Code, Bot, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
@@ -55,7 +55,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-primary-foreground/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              InnovoraMind LLC™ is a global technology and knowledge enterprise delivering advanced IT solutions, AI-driven research platforms, academic publications, education systems, conferences, consultancy, and innovation ecosystems for institutions, industries, and professionals worldwide.
+              InnovoraMind LLC™ is an enterprise technology and research partner delivering advanced IT solutions, AI-driven automation, software systems, and digital transformation for industries and institutions worldwide.
             </motion.p>
 
             <motion.div
@@ -64,11 +64,11 @@ export const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <Button asChild size="lg" className="bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold px-8 group cursor-pointer" onClick={scrollToServices}>
-                <span>
-                  Discover Our Ecosystem
+              <Button asChild size="lg" className="bg-gradient-to-r from-secondary to-accent hover:opacity-90 text-primary-foreground font-semibold px-8 group cursor-pointer">
+                <Link to="/solutions">
+                  Explore Our Solutions
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </span>
+                </Link>
               </Button>
             </motion.div>
 
@@ -80,9 +80,9 @@ export const HeroSection = () => {
               className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t border-primary-foreground/10"
             >
               {[
-                { icon: Calendar, value: '50+', label: 'Annual Events' },
-                { icon: Users, value: '10K+', label: 'Attendees' },
-                { icon: Globe2, value: '45+', label: 'Countries' },
+                { icon: Cpu, value: '50+', label: 'AI Solutions' },
+                { icon: Code, value: '100+', label: 'Projects' },
+                { icon: Globe2, value: '10+', label: 'Domains' },
               ].map((stat, index) => (
                 <div key={index} className="text-center lg:text-left">
                   <stat.icon className="w-6 h-6 text-accent mb-2 mx-auto lg:mx-0" />
@@ -114,11 +114,11 @@ export const HeroSection = () => {
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center">
-                    <Users className="w-5 h-5 text-secondary" />
+                    <Bot className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-primary-foreground">500+ Speakers</div>
-                    <div className="text-xs text-primary-foreground/60">Industry Experts</div>
+                    <div className="text-sm font-semibold text-primary-foreground">AI Solutions</div>
+                    <div className="text-xs text-primary-foreground/60">Next-gen Automation</div>
                   </div>
                 </div>
               </motion.div>
@@ -130,11 +130,11 @@ export const HeroSection = () => {
               >
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center">
-                    <Globe2 className="w-5 h-5 text-accent" />
+                    <Zap className="w-5 h-5 text-accent" />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-primary-foreground">Global Reach</div>
-                    <div className="text-xs text-primary-foreground/60">45+ Countries</div>
+                    <div className="text-sm font-semibold text-primary-foreground">Research Innovation</div>
+                    <div className="text-xs text-primary-foreground/60">ISO Certified</div>
                   </div>
                 </div>
               </motion.div>
