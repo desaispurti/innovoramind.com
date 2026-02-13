@@ -21,10 +21,8 @@ const mainNavItems = [{
   label: 'Registrations',
   path: '/registrations'
 }];
+
 const moreNavItems = [{
-  label: 'Mentorship',
-  path: '/mentorship'
-}, {
   label: 'Tech Innovation',
   path: '/tech-innovation'
 }, {

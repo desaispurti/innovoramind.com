@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { Play, Pause } from 'lucide-react';
 import showcaseVideo from '../../assets/VN20260213_165728.mp4';
@@ -6,7 +6,8 @@ import showcaseVideo from '../../assets/VN20260213_165728.mp4';
 export const VideoShowcase = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
-    const [isPlaying, setIsPlaying] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
+    const isInView = useInView(videoRef, { amount: 0.3 });
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
@@ -19,15 +20,25 @@ export const VideoShowcase = () => {
     const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
     const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [10, 0, -10]);
 
-    // Autoplay video when component mounts
+    // Autoplay video when in view
     useEffect(() => {
         if (videoRef.current) {
-            videoRef.current.play().catch(error => {
-                console.log("Autoplay prevented:", error);
+            if (isInView) {
+                const playPromise = videoRef.current.play();
+                if (playPromise !== undefined) {
+                    playPromise
+                        .then(() => setIsPlaying(true))
+                        .catch(error => {
+                            console.log("Autoplay prevented:", error);
+                            setIsPlaying(false);
+                        });
+                }
+            } else {
+                videoRef.current.pause();
                 setIsPlaying(false);
-            });
+            }
         }
-    }, []);
+    }, [isInView]);
 
     const togglePlay = () => {
         if (videoRef.current) {
@@ -109,7 +120,7 @@ export const VideoShowcase = () => {
                                 loop
                                 muted
                                 playsInline
-                                autoPlay
+
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
                             >
@@ -178,31 +189,7 @@ export const VideoShowcase = () => {
                 </motion.div>
 
                 {/* Bottom CTA */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                    className="text-center mt-16"
-                >
-                    <p className="text-lg text-muted-foreground mb-6">
-                        Ready to bring your vision to life?
-                    </p>
-                    <motion.a
-                        href="/contact"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-secondary to-accent text-white rounded-full font-semibold shadow-lg hover:shadow-xl transition-all"
-                    >
-                        Start Your Project
-                        <motion.span
-                            animate={{ x: [0, 5, 0] }}
-                            transition={{ duration: 1.5, repeat: Infinity }}
-                        >
-                            →
-                        </motion.span>
-                    </motion.a>
-                </motion.div>
+
             </div>
         </section>
     );
