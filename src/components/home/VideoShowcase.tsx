@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
 import { Play, Pause } from 'lucide-react';
+import showcaseVideo from '../../assets/VN20260213_165728.mp4';
 
 export const VideoShowcase = () => {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -13,10 +14,10 @@ export const VideoShowcase = () => {
     });
 
     // Parallax and scale effects
-    const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]);
+    const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 0.9]);
     const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0]);
     const y = useTransform(scrollYProgress, [0, 1], [100, -100]);
-    const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [15, 0, -15]);
+    const rotateX = useTransform(scrollYProgress, [0, 0.5, 1], [10, 0, -10]);
 
     // Autoplay video when component mounts
     useEffect(() => {
@@ -47,7 +48,7 @@ export const VideoShowcase = () => {
                 <div className="absolute bottom-1/4 -right-48 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
             </div>
 
-            <div className="container-custom relative z-10">
+            <div className="container-custom relative z-10 px-4 md:px-6">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -81,13 +82,13 @@ export const VideoShowcase = () => {
                         rotateX,
                         transformPerspective: 1200
                     }}
-                    className="relative max-w-6xl mx-auto"
+                    className="relative max-w-[1400px] mx-auto"
                 >
                     {/* Decorative Frame Elements */}
                     <div className="absolute -inset-4 bg-gradient-to-r from-secondary via-accent to-secondary rounded-3xl blur-2xl opacity-20 animate-pulse" />
 
                     {/* Main Video Frame */}
-                    <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 rounded-3xl p-4 shadow-2xl border border-slate-700/50">
+                    <div className="relative bg-gradient-to-br from-slate-900 to-slate-800 dark:from-slate-950 dark:to-slate-900 rounded-3xl p-2 sm:p-4 shadow-2xl border border-slate-700/50">
                         {/* Browser-like Header */}
                         <div className="flex items-center gap-2 mb-4 px-4 py-3 bg-slate-800/50 dark:bg-slate-950/50 rounded-xl">
                             <div className="flex gap-2">
@@ -95,7 +96,7 @@ export const VideoShowcase = () => {
                                 <div className="w-3 h-3 rounded-full bg-yellow-500" />
                                 <div className="w-3 h-3 rounded-full bg-green-500" />
                             </div>
-                            <div className="flex-1 mx-4 px-4 py-1 bg-slate-700/50 dark:bg-slate-900/50 rounded-lg text-xs text-slate-400 font-mono">
+                            <div className="flex-1 mx-4 px-4 py-1 bg-slate-700/50 dark:bg-slate-900/50 rounded-lg text-xs text-slate-400 font-mono overflow-hidden whitespace-nowrap">
                                 innovoramind.com/showcase
                             </div>
                         </div>
@@ -104,7 +105,7 @@ export const VideoShowcase = () => {
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
                             <video
                                 ref={videoRef}
-                                className="w-full h-auto"
+                                className="w-full h-auto aspect-video object-cover"
                                 loop
                                 muted
                                 playsInline
@@ -112,7 +113,7 @@ export const VideoShowcase = () => {
                                 onPlay={() => setIsPlaying(true)}
                                 onPause={() => setIsPlaying(false)}
                             >
-                                <source src="/src/assets/VN20260213_165728.mp4" type="video/mp4" />
+                                <source src={showcaseVideo} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
 
