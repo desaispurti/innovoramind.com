@@ -4,13 +4,7 @@ import { MapPin, ArrowRight, Users } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const upcomingEvents = [
-  {
-    title: 'Cognitive Computing & Advanced AI Systems',
-    location: 'Singapore | Hybrid',
-    attendees: '2,500+',
-    image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2070&auto=format&fit=crop',
-    category: 'Artificial Intelligence',
-  },
+
   {
     title: 'DevOps & Scalable Software Architecture',
     location: 'Hybrid Mode',

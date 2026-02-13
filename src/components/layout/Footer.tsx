@@ -55,7 +55,7 @@ export const Footer = () => {
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Resources</h4>
             <ul className="space-y-3">
-              {['Mentorship', 'Tech Innovation', 'About Us', 'Contact'].map((item) => (
+              {['Tech Innovation', 'About Us', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(/ /g, '-')}`}
