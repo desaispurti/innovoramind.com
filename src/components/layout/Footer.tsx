@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import seal from '@/assets/seal.png';
 
@@ -7,43 +7,47 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="hero-gradient text-primary-foreground">
-      <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <footer className="relative bg-slate-950 text-white overflow-hidden border-t border-white/5">
+      {/* Background Accents */}
+      <div className="absolute inset-0 pointer-events-none opacity-30">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 rounded-full blur-[120px] translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-x-1/3 translate-y-1/3" />
+      </div>
+
+      <div className="container-custom relative z-10 pt-20 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
           {/* Company Info */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <img src={logo} alt="InnovoraMind Logo" className="w-10 h-10 rounded-full object-cover" />
-              <span className="font-display font-bold text-xl">
+            <Link to="/" className="flex items-center gap-3 group">
+              <img src={logo} alt="InnovoraMind Logo" className="w-12 h-12 rounded-full object-cover transition-transform group-hover:scale-110" />
+              <span className="font-display font-bold text-2xl tracking-tight">
                 InnovoraMind
               </span>
             </Link>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
+            <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
               A premier New Mexico-based enterprise delivering world-class conferences, research innovations, and technology solutions across 10 major business domains.
             </p>
-            {/* Company Seal */}
-            <div className="flex items-center gap-3 pt-2">
-              <img src={seal} alt="InnovoraMind LLC - New Mexico LLC Formation, ISO 9001:2015 | ISO/IEC 27001:2022" className="w-20 h-20 object-contain rounded-lg bg-white/10 p-1" />
-              <div className="text-xs text-primary-foreground/60 leading-relaxed">
-                <p className="font-semibold text-primary-foreground/80">InnovoraMind LLC</p>
+            {/* ISO Seal */}
+            <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+              <img src={seal} alt="InnovoraMind LLC" className="w-14 h-14 object-contain" />
+              <div className="text-[10px] text-slate-400 leading-tight">
+                <p className="font-bold text-slate-200 mb-1">InnovoraMind LLC</p>
                 <p>ISO 9001:2015 | ISO/IEC 27001:2022</p>
-                <p>1209 Mountain Road Pl NE, Ste H</p>
-                <p>Albuquerque, NM 87110, USA</p>
               </div>
             </div>
-
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Quick Links</h4>
+            <ul className="space-y-4">
               {['Solutions', 'Registrations', 'Funding & Grants'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(/ /g, '-')}`}
-                    className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm"
+                    className="text-slate-400 hover:text-secondary transition-all text-sm flex items-center gap-2 group"
                   >
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                     {item}
                   </Link>
                 </li>
@@ -53,14 +57,15 @@ export const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Resources</h4>
-            <ul className="space-y-3">
+            <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Resources</h4>
+            <ul className="space-y-4">
               {['Mentorship', 'Tech Innovation', 'About Us', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(/ /g, '-')}`}
-                    className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm"
+                    className="text-slate-400 hover:text-secondary transition-all text-sm flex items-center gap-2 group"
                   >
+                    <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                     {item}
                   </Link>
                 </li>
@@ -70,18 +75,22 @@ export const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Contact Us</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-secondary mt-0.5 flex-shrink-0" />
-                <span className="text-primary-foreground/70 text-sm">
+            <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Contact Us</h4>
+            <ul className="space-y-6">
+              <li className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-secondary" />
+                </div>
+                <span className="text-slate-400 text-sm leading-relaxed">
                   1209 Mountain Road Pl NE, Ste H<br />
                   Albuquerque, NM 87110, USA
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
-                <a href="mailto:Events@innovoramind.com" className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm">
+              <li className="flex items-center gap-4">
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <a href="mailto:Events@innovoramind.com" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                   Events@innovoramind.com
                 </a>
               </li>
@@ -90,20 +99,21 @@ export const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/60 text-sm">
-            © {currentYear} InnovoraMind. All rights reserved.
+        <div className="mt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-slate-500 text-xs text-center md:text-left leading-relaxed">
+            © {currentYear} InnovoraMind LLC. All rights reserved. <br className="md:hidden" />
+            A New Mexico Enterprise Division.
           </p>
-          <div className="flex gap-6">
-            <Link to="/privacy-policy" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
-              Privacy Policy
-            </Link>
-            <Link to="/terms-of-service" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
-              Terms of Service
-            </Link>
-            <Link to="/cookie-policy" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
-              Cookie Policy
-            </Link>
+          <div className="flex flex-wrap justify-center gap-8">
+            {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map((item) => (
+              <Link
+                key={item}
+                to={`/${item.toLowerCase().replace(/ /g, '-')}`}
+                className="text-slate-500 hover:text-secondary text-xs transition-colors"
+              >
+                {item}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

@@ -1,76 +1,107 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Rocket, Zap, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export const CTASection = () => {
   return (
-    <section className="section-padding hero-gradient relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-accent/20 rounded-full blur-3xl" />
+    <section className="relative py-24 overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 bg-slate-950">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/20 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
       </div>
 
       <div className="container-custom relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-4xl mx-auto"
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="relative rounded-3xl overflow-hidden shadow-2xl"
         >
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-primary-foreground/90 mb-6"
-          >
-            <Sparkles className="w-4 h-4 text-accent" />
-            Limited Early Bird Offer
-          </motion.div>
+          {/* Interior Gradient & Mesh */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 to-indigo-950 border border-white/10" />
 
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-6">
-            Ready to Transform Your{' '}
-            <span className="text-gradient">Future?</span>
-          </h2>
-
-          <p className="text-lg sm:text-xl text-primary-foreground/70 mb-10 max-w-2xl mx-auto">
-            Join thousands of innovators, researchers, and industry leaders at our upcoming conferences. Register now and save up to 30% with early bird pricing.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 font-semibold px-8 group">
-              <Link to="/registrations">
-                Register Now
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8">
-              <Link to="/upcoming-conferences">
-                Explore Conferences
-              </Link>
-            </Button>
+          {/* Animated background patterns */}
+          <div className="absolute inset-0 opacity-20">
+            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+              <defs>
+                <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                  <path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" strokeWidth="0.1" />
+                </pattern>
+              </defs>
+              <rect width="100" height="100" fill="url(#grid)" />
+            </svg>
           </div>
 
-          {/* Trust Badges */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 pt-12 border-t border-primary-foreground/10"
-          >
-            <p className="text-primary-foreground/60 text-sm mb-6">Trusted by leading organizations worldwide</p>
-            <div className="flex flex-wrap justify-center gap-8 opacity-60">
-              {['Microsoft', 'Google', 'Stanford', 'MIT', 'IBM'].map((company) => (
-                <span key={company} className="font-display text-xl font-bold text-primary-foreground/80">
-                  {company}
+          <div className="relative px-8 py-16 md:py-24 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-sm font-medium text-secondary-foreground mb-8">
+                <Sparkles className="w-4 h-4 text-secondary" />
+                <span>Accelerate Your Digital Evolution</span>
+              </div>
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight">
+                Ready to Transform Your <br />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-secondary via-accent to-primary">
+                  Enterprise with AI?
                 </span>
-              ))}
-            </div>
-          </motion.div>
+              </h2>
+
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed">
+                Join InnovoraMind at the forefront of technological innovation.
+                We deliver scalable solutions that empower global enterprises to define the future.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Button asChild size="lg" className="h-14 px-8 bg-secondary hover:bg-secondary/90 text-white font-bold text-lg rounded-xl shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all group">
+                  <Link to="/contact">
+                    Partner With Us
+                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="h-14 px-8 border-white/20 text-white hover:bg-white/5 font-semibold text-lg rounded-xl backdrop-blur-sm transition-all">
+                  <Link to="/solutions">
+                    Explore Solutions
+                  </Link>
+                </Button>
+              </div>
+
+              {/* Trust metrics */}
+              <div className="mt-16 pt-12 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-white">10+</div>
+                  <div className="text-slate-400 text-sm">Business Domains</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-white">500+</div>
+                  <div className="text-slate-400 text-sm">Innovations Shared</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-white">99%</div>
+                  <div className="text-slate-400 text-sm">Client Satisfaction</div>
+                </div>
+                <div className="space-y-2">
+                  <div className="text-3xl font-bold text-white">Global</div>
+                  <div className="text-slate-400 text-sm">Research Network</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Floating icons for visual interest */}
+          <div className="absolute top-1/2 left-12 -translate-y-1/2 hidden xl:block opacity-20">
+            <Rocket className="w-16 h-16 text-secondary animate-bounce" />
+          </div>
+          <div className="absolute top-1/2 right-12 -translate-y-1/2 hidden xl:block opacity-20">
+            <Globe className="w-16 h-16 text-primary animate-pulse" />
+          </div>
         </motion.div>
       </div>
     </section>
