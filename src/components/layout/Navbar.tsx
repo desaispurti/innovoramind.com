@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { MexicanFlag } from '@/components/ui/MexicanFlag';
 import logo from '@/assets/logo.png';
 import seal from '@/assets/seal.png';
 const mainNavItems = [{
@@ -53,9 +54,15 @@ export const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group z-50 relative">
               <img src={seal} alt="Seal" className="h-14 w-auto" />
-              <span className="font-display font-bold text-lg text-foreground hidden sm:block">
-                Innovora<span className="text-gradient">Mind LLC</span>
-              </span>
+              <div className="hidden sm:flex flex-col">
+                <span className="font-display font-bold text-lg text-foreground leading-tight">
+                  Innovora<span className="text-gradient">Mind LLC</span>
+                </span>
+                <div className="flex items-center gap-1.5 mt-0.5">
+                  <MexicanFlag width={18} height={12} />
+                  <span className="text-[10px] font-medium text-muted-foreground/70 tracking-wide uppercase">New Mexico, USA</span>
+                </div>
+              </div>
             </Link>
 
             {/* Hamburger Button */}

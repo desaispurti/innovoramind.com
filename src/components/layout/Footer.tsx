@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, ArrowRight } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import seal from '@/assets/seal.png';
 
@@ -41,14 +41,14 @@ export const Footer = () => {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Quick Links</h4>
             <ul className="space-y-4">
-              {['Solutions', 'Registrations', 'Funding & Grants'].map((item) => (
-                <li key={item}>
+              {[{ label: 'Solutions', path: '/solutions' }, { label: 'Registrations', path: '/registrations' }, { label: 'Funding & Grants', path: '/funding-grants' }].map((item) => (
+                <li key={item.label}>
                   <Link
-                    to={`/${item.toLowerCase().replace(/ /g, '-')}`}
+                    to={item.path}
                     className="text-slate-400 hover:text-secondary transition-all text-sm flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
@@ -57,16 +57,16 @@ export const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h4 className="font-display font-semibold text-lg mb-6">Resources</h4>
-            <ul className="space-y-3">
-              {['Tech Innovation', 'About Us', 'Contact'].map((item) => (
-                <li key={item}>
+            <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Resources</h4>
+            <ul className="space-y-4">
+              {[{ label: 'Tech Innovation', path: '/tech-innovation' }, { label: 'About Us', path: '/about' }, { label: 'Contact', path: '/contact' }].map((item) => (
+                <li key={item.label}>
                   <Link
-                    to={`/${item.toLowerCase().replace(/ /g, '-')}`}
+                    to={item.path}
                     className="text-slate-400 hover:text-secondary transition-all text-sm flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}
