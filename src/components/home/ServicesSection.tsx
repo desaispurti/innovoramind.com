@@ -21,8 +21,8 @@ const services = [
   },
   {
     icon: BookOpen,
-    title: 'Academic Publishing & Intellectual Content',
-    description: 'Journals, books, conference proceedings, digital repositories, editorial systems, peer-review platforms, and scholarly dissemination.',
+    title: 'Technical Documentation & Knowledge Systems',
+    description: 'Knowledge bases, technical documentation, digital repositories, content management systems, and enterprise knowledge platforms.',
     items: [],
     gradient: 'from-emerald-500 to-teal-500',
   },
@@ -35,15 +35,15 @@ const services = [
   },
   {
     icon: Calendar,
-    title: 'Conferences & Knowledge Platforms',
-    description: 'Global conferences, workshops, FDPs, symposiums, hybrid events, and technology-driven academic networking platforms.',
+    title: 'Innovation Labs & Technology Platforms',
+    description: 'Tech incubation, innovation workshops, hackathons, hybrid collaboration tools, and technology-driven networking platforms.',
     items: [],
     gradient: 'from-rose-500 to-pink-500',
   },
   {
     icon: Briefcase,
     title: 'Consultancy & Advisory Services',
-    description: 'IT, academic, institutional, startup, industry, project, thesis, and multidisciplinary consultancy across domains.',
+    description: 'IT strategy, startup advisory, project management, system architecture, digital transformation, and multidisciplinary consultancy across domains.',
     items: [],
     gradient: 'from-indigo-500 to-blue-500',
   },
@@ -57,7 +57,7 @@ const services = [
   {
     icon: Share2,
     title: 'Digital Branding & Knowledge Visibility',
-    description: 'Academic branding, digital presence, research portals, databases, digital libraries, and content management platforms.',
+    description: 'Corporate branding, digital presence, product portals, analytics dashboards, digital libraries, and content management platforms.',
     items: [],
     gradient: 'from-fuchsia-500 to-pink-500',
   },

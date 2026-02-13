@@ -18,7 +18,7 @@ const PrivacyPolicy = () => {
             details: [
                 "Name and contact information (email, phone, address)",
                 "Professional information (company, job title, research interests)",
-                "Academic credentials and publications",
+                "Professional credentials and specializations",
                 "Payment information (processed securely)",
                 "IP address, browser type, and device information",
                 "Pages visited and interaction data"
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
             details: [
                 "Provide and maintain our services",
                 "Process registrations and payments",
-                "Send updates about conferences and events",
+                "Send updates about services and solutions",
                 "Respond to inquiries and provide support",
                 "Improve our website and services",
                 "Comply with legal obligations"

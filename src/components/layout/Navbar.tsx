@@ -146,7 +146,7 @@ export const Navbar = () => {
                     className="p-6 bg-secondary/5 rounded-2xl border border-secondary/10"
                   >
                     <p className="text-foreground/80 font-medium mb-2">Have questions?</p>
-                    <p className="text-sm text-muted-foreground mb-4">Contact our team for support regarding conferences, publications, or partnerships.</p>
+                    <p className="text-sm text-muted-foreground mb-4">Contact our team for support regarding IT solutions, projects, or partnerships.</p>
                     <Link to="/contact" onClick={() => setIsOpen(false)} className="text-secondary font-semibold hover:underline">
                       Get in touch &toea;
                     </Link>

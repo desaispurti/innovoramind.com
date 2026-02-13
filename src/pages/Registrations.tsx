@@ -10,23 +10,23 @@ import { useState } from 'react';
 const benefits = [
   {
     icon: Calendar,
-    title: 'Full Conference Access',
-    description: 'Attend all sessions, workshops, and keynote presentations'
+    title: 'Dedicated Project Timeline',
+    description: 'Structured onboarding with clear milestones and deliverables'
   },
   {
     icon: Users,
-    title: 'Networking Opportunities',
-    description: 'Connect with industry leaders and fellow researchers'
+    title: 'Expert Team Access',
+    description: 'Connect with our senior engineers and solution architects'
   },
   {
     icon: CheckCircle,
-    title: 'Certificate of Attendance',
-    description: 'Official conference participation certificate'
+    title: 'Quality Assurance',
+    description: 'ISO-certified processes ensuring top-tier deliverables'
   },
   {
     icon: MapPin,
-    title: 'Hybrid Participation',
-    description: 'Choose between in-person or virtual attendance'
+    title: 'Remote & On-site Support',
+    description: 'Flexible engagement models tailored to your needs'
   }
 ];
 
@@ -49,10 +49,10 @@ const Registrations = () => {
 
     try {
       // Create professional email template
-      const emailSubject = `[Event Registration] ${firstName} ${lastName}`;
+      const emailSubject = `[Service Inquiry] ${firstName} ${lastName}`;
       const emailBody = `Dear InnovoraMind Team,
 
-I would like to register for your upcoming event. Please find my details below:
+I would like to inquire about your IT solutions and services. Please find my details below:
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 PERSONAL INFORMATION
@@ -78,7 +78,7 @@ ${comments || 'No additional comments'}
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Please send me information about upcoming events, registration fees, and participation details.
+Please send me information about your IT solutions, service packages, and engagement details.
 
 Best regards,
 ${firstName} ${lastName}
@@ -127,10 +127,10 @@ Timestamp: ${new Date().toLocaleString('en-US', {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Register for Our <span className="text-gradient">Conferences</span>
+              Register for Our <span className="text-gradient">Services</span>
             </h1>
             <p className="text-xl text-primary-foreground/70">
-              Join world-class conferences featuring leading experts, groundbreaking research, and unparalleled networking opportunities.
+              Partner with us for cutting-edge IT solutions, AI-driven automation, and enterprise digital transformation.
             </p>
           </motion.div>
         </div>
@@ -146,10 +146,10 @@ Timestamp: ${new Date().toLocaleString('en-US', {
             className="text-center mb-12"
           >
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Why Attend?
+              Why Choose Us?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Experience exceptional value and opportunities at our conferences
+              Experience exceptional value and innovation with our IT solutions
             </p>
           </motion.div>
 
@@ -192,7 +192,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
                 Registration Form
               </h2>
               <p className="text-muted-foreground text-lg">
-                Complete the form below and our team will contact you with conference details and payment information.
+                Complete the form below and our team will contact you with service details and project consultation.
               </p>
             </motion.div>
 
@@ -209,7 +209,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
                   </div>
                   <h3 className="font-display text-3xl font-bold text-foreground mb-4">Registration Received</h3>
                   <p className="text-muted-foreground text-lg mb-8 max-w-sm mx-auto">
-                    Thank you for registering. Our team will review your details and contact you shortly with conference information.
+                    Thank you for registering. Our team will review your details and contact you shortly with service information.
                   </p>
                   <Button
                     variant="outline"
@@ -266,7 +266,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="position" className="text-foreground/70 ml-1">Position/Title</Label>
-                        <Input id="position" name="position" placeholder="e.g., Research Scientist, Professor" required className="h-12 rounded-xl bg-muted/30 border-none focus-visible:ring-2 focus-visible:ring-primary/20" />
+                        <Input id="position" name="position" placeholder="e.g., CTO, Project Manager, Developer" required className="h-12 rounded-xl bg-muted/30 border-none focus-visible:ring-2 focus-visible:ring-primary/20" />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="country" className="text-foreground/70 ml-1">Country</Label>

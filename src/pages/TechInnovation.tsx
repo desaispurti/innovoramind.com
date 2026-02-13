@@ -19,14 +19,14 @@ const techDomains = [
     {
         icon: Cpu,
         title: 'Artificial Intelligence',
-        description: 'Specialized tracks in Machine Learning, Deep Learning, and Neural Networks. We bring together global experts to discuss AI Ethics, Generative AI, and Autonomous Systems.',
+        description: 'Specialized solutions in Machine Learning, Deep Learning, and Neural Networks. We deliver enterprise-grade AI systems for automation, Generative AI, and intelligent decision-making.',
         color: 'from-blue-500 to-cyan-400',
         image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2000&auto=format&fit=crop'
     },
     {
         icon: Database,
         title: 'Information Technology',
-        description: 'Focusing on Cloud Computing, Big Data Analytics, and enterprise-scale IT infrastructure. Our conferences cover the backbone of modern digital organizations.',
+        description: 'Focusing on Cloud Computing, Big Data Analytics, and enterprise-scale IT infrastructure. Our solutions power the backbone of modern digital organizations.',
         color: 'from-purple-500 to-pink-400',
         image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2000&auto=format&fit=crop'
     },
@@ -81,17 +81,17 @@ const TechInnovation = () => {
                             Pioneering the <span className="text-secondary">Digital Frontier</span>
                         </h1>
                         <p className="text-xl text-white/80 mb-10 leading-relaxed">
-                            InnovoraMind is at the forefront of the technological revolution. We curate world-class conferences that bridge the gap between academic research and industrial application in AI, IT, and Software.
+                            InnovoraMind is at the forefront of the technological revolution. We build enterprise-grade solutions that bridge the gap between cutting-edge research and real-world industrial application in AI, IT, and Software.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-8 h-14">
-                                <Link to="/upcoming-conferences">
-                                    Browse Tech Conferences
+                                <Link to="/solutions">
+                                    Explore Our Solutions
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
                             </Button>
                             <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 h-14 backdrop-blur-sm">
-                                <Link to="/proceedings">View Research Papers</Link>
+                                <Link to="/contact">Get a Consultation</Link>
                             </Button>
                         </div>
                     </motion.div>
@@ -110,7 +110,7 @@ const TechInnovation = () => {
                             Our Core Technology Domains
                         </h2>
                         <p className="text-muted-foreground text-lg italic">
-                            Empowering the world through curated knowledge exchange in the most impactful fields of the 21st century.
+                            Empowering businesses through advanced technology solutions in the most impactful fields of the 21st century.
                         </p>
                     </div>
 
@@ -189,14 +189,14 @@ const TechInnovation = () => {
                                 Be Part of the <span className="text-gradient">Tech Evolution</span>
                             </h2>
                             <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto italic">
-                                "We don't just host events; we spark the collaborations that define the future of information technology."
+                                "We don't just build software; we engineer the solutions that define the future of information technology."
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                                 <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold rounded-full px-10 h-16 shadow-xl shadow-primary/20 transform hover:scale-105 transition-all">
-                                    <Link to="/upcoming-conferences">View All Tech Events</Link>
+                                    <Link to="/solutions">Explore All Solutions</Link>
                                 </Button>
                                 <Button asChild variant="ghost" size="lg" className="text-foreground font-bold hover:bg-muted rounded-full px-10 h-16 underline decoration-primary underline-offset-8">
-                                    <Link to="/registrations">Join as a Participant</Link>
+                                    <Link to="/registrations">Start a Project</Link>
                                 </Button>
                             </div>
                         </motion.div>

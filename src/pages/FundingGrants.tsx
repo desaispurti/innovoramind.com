@@ -154,7 +154,7 @@ const FundingGrants = () => {
                             Funding & <span className="text-secondary">Grant Proposals</span>
                         </h1>
                         <p className="text-xl text-white/80 leading-relaxed mb-10">
-                            At EminSphere, we are committed to supporting innovative ideas, high-impact research, and transformative projects across multiple disciplines.
+                            At InnovoraMind, we are committed to supporting innovative ideas, high-impact research, and transformative projects across multiple disciplines.
                             Submit your proposals for evaluation and potential grant support.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -251,7 +251,7 @@ const FundingGrants = () => {
                             Funding Domains & Focus Areas
                         </h2>
                         <p className="text-muted-foreground">
-                            EminSphere supports multidisciplinary and interdisciplinary proposals across these core areas.
+                            InnovoraMind supports multidisciplinary and interdisciplinary proposals across these core areas.
                             Novel and high-impact proposals are given priority.
                         </p>
                     </div>
@@ -361,7 +361,7 @@ const FundingGrants = () => {
 
                     <div className="p-10 rounded-[40px] glass border border-white/10 text-center max-w-3xl mx-auto">
                         <h3 className="font-display text-2xl font-bold mb-4">Start Your Application</h3>
-                        <p className="text-white/60 mb-8">Ready to transform your vision into reality? Join EminSphere's ecosystem of innovators.</p>
+                        <p className="text-white/60 mb-8">Ready to transform your vision into reality? Join InnovoraMind's ecosystem of innovators.</p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-12 h-14">
                                 <Link to="/contact">Start Your Grant Application</Link>
@@ -376,7 +376,7 @@ const FundingGrants = () => {
                 <div className="container-custom">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div>
-                            <h2 className="font-display text-4xl font-bold text-foreground mb-6">Why EminSphere?</h2>
+                            <h2 className="font-display text-4xl font-bold text-foreground mb-6">Why InnovoraMind?</h2>
                             <ul className="space-y-4">
                                 {[
                                     'Multidisciplinary funding approach',

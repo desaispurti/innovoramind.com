@@ -37,7 +37,7 @@ export const HeroSection = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-primary-foreground/90 mb-6"
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              Technology-Driven Research, Education & Knowledge Solutions
+              Enterprise IT Solutions, AI & Digital Transformation
             </motion.div>
 
             <motion.h1

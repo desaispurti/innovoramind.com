@@ -8,21 +8,21 @@ import { MessageSquare, Users, Award, Heart, ArrowRight, Quote } from 'lucide-re
 
 const testimonials = [
   {
-    quote: "The AI Innovation Summit completely transformed my perspective on machine learning. The connections I made there led to a $2M research grant.",
+    quote: "InnovoraMind's AI solutions completely transformed our data pipeline. The team's expertise helped us achieve a 40% improvement in operational efficiency.",
     author: "Dr. Amanda Foster",
     role: "Research Director",
     company: "Tech Innovation Labs",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
   },
   {
-    quote: "As a first-time speaker, I was nervous, but the team made me feel incredibly supported. The feedback I received was invaluable for my career.",
+    quote: "As a startup, we needed reliable tech partners. InnovoraMind delivered our MVP ahead of schedule and the quality exceeded all expectations.",
     author: "Marcus Chen",
     role: "Senior Engineer",
     company: "DataFlow Inc.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
   },
   {
-    quote: "The networking opportunities at these conferences are unparalleled. I've built partnerships that have generated millions in business value.",
+    quote: "The digital transformation solutions from InnovoraMind are unparalleled. They've helped us modernize our entire IT infrastructure seamlessly.",
     author: "Jennifer Walsh",
     role: "VP of Partnerships",
     company: "Global Tech Solutions",
@@ -46,7 +46,7 @@ const ShareYourStory = () => {
               Share Your <span className="text-gradient">Story</span>
             </h1>
             <p className="text-xl text-primary-foreground/70">
-              Your experience matters. Tell us how our conferences, publications, or services have impacted your journey.
+              Your experience matters. Tell us how our IT solutions, technology services, or consulting have impacted your business.
             </p>
           </motion.div>
         </div>
@@ -188,8 +188,8 @@ const ShareYourStory = () => {
                   </div>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="conference">Which conference/event did you attend?</Label>
-                  <Input id="conference" placeholder="e.g., AI Innovation Summit 2025" />
+                  <Label htmlFor="service">Which service or solution did you use?</Label>
+                  <Input id="service" placeholder="e.g., AI Automation, Cloud Migration, Custom Software" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="story">Your Story</Label>

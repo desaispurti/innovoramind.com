@@ -41,8 +41,8 @@ const TermsOfService = () => {
             content: "Clear and fair payment terms for all our services.",
             color: "from-orange-500 to-amber-500",
             details: [
-                "Conference: Refunds up to 30 days before (10% fee applies)",
-                "Publications: Non-refundable after review begins",
+                "Services: Refunds available before project kickoff (10% fee applies)",
+                "Software Licenses: Non-refundable after deployment begins",
                 "Consulting: Per individual service agreements",
                 "All fees stated in USD, paid in advance"
             ]

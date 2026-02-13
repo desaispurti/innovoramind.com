@@ -181,7 +181,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
 
                       <div className="space-y-2">
                         <Label htmlFor="subject" className="text-foreground/70 ml-1">Inquiry Type / Subject</Label>
-                        <Input id="subject" name="subject" placeholder="Conference Partnership" required className="h-12 rounded-xl bg-muted/30 border-none focus-visible:ring-2 focus-visible:ring-primary/20" />
+                        <Input id="subject" name="subject" placeholder="IT Solutions Partnership" required className="h-12 rounded-xl bg-muted/30 border-none focus-visible:ring-2 focus-visible:ring-primary/20" />
                       </div>
 
                       <div className="space-y-2">

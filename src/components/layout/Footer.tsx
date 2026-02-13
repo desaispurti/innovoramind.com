@@ -25,7 +25,7 @@ export const Footer = () => {
               </span>
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed max-w-sm">
-              A premier New Mexico-based enterprise delivering world-class conferences, research innovations, and technology solutions across 10 major business domains.
+              A premier New Mexico-based enterprise delivering advanced IT solutions, AI-driven automation, software systems, and digital transformation across 10+ major business domains.
             </p>
             {/* ISO Seal */}
             <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">

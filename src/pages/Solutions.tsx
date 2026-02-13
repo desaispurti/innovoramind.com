@@ -184,7 +184,7 @@ const Solutions = () => {
                             <div className="space-y-8">
                                 {[
                                     { icon: Globe, title: 'Global Expertise', desc: 'Our team consists of researchers and engineers from around the world.' },
-                                    { icon: Search, title: 'Research-First Approach', desc: 'We don\'t just build; we innovate based on deep academic and market research.' },
+                                    { icon: Search, title: 'Research-First Approach', desc: 'We don\'t just build; we innovate based on deep industry and market research.' },
                                     { icon: Shield, title: 'ISO Certified Standards', desc: 'Operating with ISO 9001:2015 and ISO/IEC 27001:2022 certifications for quality and security.' }
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-6 items-start">

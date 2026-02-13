@@ -24,7 +24,7 @@ const About = () => {
               About <span className="text-gradient">InnovoraMind</span>
             </h1>
             <p className="text-xl sm:text-2xl text-primary-foreground/80 font-medium">
-              Advancing Research, Innovation, and Scholarly Excellence
+              Advancing Technology, Innovation, and Digital Excellence
             </p>
           </motion.div>
         </div>
@@ -46,15 +46,15 @@ const About = () => {
               </h2>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                InnovoraMind is a professionally driven academic and research-focused platform established to support researchers, academicians, scholars, and institutions across multidisciplinary domains. We operate at the intersection of research quality, innovation, and structured academic growth.
+                InnovoraMind is a professionally driven technology and innovation platform established to support businesses, enterprises, and institutions across diverse industries. We operate at the intersection of technology excellence, innovation, and structured digital growth.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our core activities include facilitating high-impact research publications, organizing national and international academic conferences, providing expert thesis and research consultation, and supporting institutions in strengthening their research culture and global academic presence.
+                Our core activities include delivering advanced IT solutions, building enterprise-grade software systems, providing AI-driven automation and digital transformation services, and supporting organizations in strengthening their technology infrastructure and global digital presence.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Through collaborative networks and structured processes, InnovoraMind aims to simplify complex academic workflows while maintaining rigor, transparency, and international standards.
+                Through collaborative partnerships and structured processes, InnovoraMind aims to simplify complex technology challenges while maintaining rigor, transparency, and international standards.
               </p>
             </motion.div>
 
@@ -114,7 +114,7 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-secondary mb-4">Our Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To create a reliable, structured, and inclusive academic ecosystem that empowers researchers and professionals to produce high-quality scholarly work, disseminate knowledge responsibly, and achieve meaningful academic recognition at national and global levels.
+                To create a reliable, structured, and inclusive technology ecosystem that empowers businesses and professionals to build high-quality digital solutions, drive innovation responsibly, and achieve meaningful technological advancement at national and global levels.
               </p>
             </motion.div>
 
@@ -131,7 +131,7 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-secondary mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be a globally trusted academic platform that bridges research, innovation, and professional collaboration—enabling ideas to evolve into impactful contributions that advance science, technology, and society.
+                To be a globally trusted technology platform that bridges innovation, engineering, and professional collaboration—enabling ideas to evolve into impactful solutions that advance business, technology, and society.
               </p>
             </motion.div>
           </div>
