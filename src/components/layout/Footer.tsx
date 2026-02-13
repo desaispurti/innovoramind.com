@@ -77,18 +77,18 @@ export const Footer = () => {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Contact Us</h4>
             <ul className="space-y-6">
-              <li className="flex items-start gap-4">
+              <li className="flex items-center gap-4">
                 <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-secondary" />
                 </div>
                 <span className="text-slate-400 text-sm leading-relaxed">
-                  1209 Mountain Road Pl NE, Ste H<br />
-                  Albuquerque, NM 87110, USA
+                  1209 Mountain Road Pl NE,<br />
+                  Ste H, Albuquerque, NM 87110, USA
                 </span>
               </li>
               <li className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-secondary" />
                 </div>
                 <a href="mailto:Events@innovoramind.com" className="text-slate-400 hover:text-white transition-colors text-sm font-medium">
                   Events@innovoramind.com
