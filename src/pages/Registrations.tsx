@@ -37,11 +37,80 @@ const Registrations = () => {
     e.preventDefault();
     setStatus('submitting');
 
+    const formData = new FormData(e.currentTarget);
+    const firstName = formData.get('firstName') as string;
+    const lastName = formData.get('lastName') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const organization = formData.get('organization') as string;
+    const position = formData.get('position') as string;
+    const country = formData.get('country') as string;
+    const comments = formData.get('comments') as string;
+
     try {
-      // Simulate API call for now
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Create professional email template
+      const emailSubject = `[Event Registration] ${firstName} ${lastName}`;
+      const emailBody = `Dear InnovoraMind Team,
+
+I would like to register for your upcoming event. Please find my details below:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PERSONAL INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Name: ${firstName} ${lastName}
+Email: ${email}
+Phone: ${phone}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+PROFESSIONAL INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Organization: ${organization}
+Position: ${position}
+Country: ${country}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ADDITIONAL COMMENTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+${comments || 'No additional comments'}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Please send me information about upcoming events, registration fees, and participation details.
+
+Best regards,
+${firstName} ${lastName}
+
+---
+This registration was submitted via the InnovoraMind website.
+Timestamp: ${new Date().toLocaleString('en-US', {
+        dateStyle: 'full',
+        timeStyle: 'long',
+        timeZone: 'America/Denver'
+      })}`;
+
+      // Encode the email components for URL
+      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=Events@innovoramind.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Simulate brief processing time for better UX
+      await new Promise(resolve => setTimeout(resolve, 800));
+
+      // Try to open Gmail in new tab
+      const gmailWindow = window.open(mailtoLink, '_blank');
+
+      // Check if popup was blocked
+      if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
+        // Popup was blocked - show error
+        setStatus('error');
+        return;
+      }
+
+      // Show success message
       setStatus('success');
     } catch (error) {
+      console.error('Error opening Gmail:', error);
       setStatus('error');
     }
   };
@@ -205,40 +274,8 @@ const Registrations = () => {
                       </div>
                     </div>
 
-                    {/* Conference Preferences */}
+                    {/* Additional Information */}
                     <div className="space-y-4 pt-6 border-t border-border">
-                      <h3 className="font-display text-lg font-semibold text-foreground flex items-center gap-2">
-                        <Calendar className="w-5 h-5 text-secondary" />
-                        Conference Preferences
-                      </h3>
-                      <div className="space-y-2">
-                        <Label htmlFor="conference" className="text-foreground/70 ml-1">Which conference are you interested in?</Label>
-                        <select
-                          id="conference"
-                          name="conference"
-                          className="flex h-12 w-full rounded-xl bg-muted/30 border-none px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
-                          required
-                        >
-                          <option value="">Select a conference...</option>
-                          <option value="icdms-26">ICDMS-26 (Feb 22, 2026 - Singapore)</option>
-                          <option value="icgbis-26">ICGBIS-26 (Mar 15-17, 2026 - TBD)</option>
-                          <option value="icdtis-26">ICDTIS-26 (Apr 8-10, 2026 - TBD)</option>
-                          <option value="icamis-26">ICAMIS-26 (May 22-24, 2026 - TBD)</option>
-                        </select>
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="participationType" className="text-foreground/70 ml-1">Participation Type</Label>
-                        <select
-                          id="participationType"
-                          name="participationType"
-                          className="flex h-12 w-full rounded-xl bg-muted/30 border-none px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/20"
-                          required
-                        >
-                          <option value="">Select participation type...</option>
-                          <option value="in-person">In-Person Attendance</option>
-                          <option value="virtual">Virtual Attendance</option>
-                        </select>
-                      </div>
                       <div className="space-y-2">
                         <Label htmlFor="comments" className="text-foreground/70 ml-1">Additional Comments or Questions</Label>
                         <Textarea
@@ -267,9 +304,14 @@ const Registrations = () => {
                     </Button>
 
                     {status === 'error' && (
-                      <p className="text-red-500 text-sm text-center font-medium">
-                        There was an error submitting your registration. Please try again.
-                      </p>
+                      <div className="p-4 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl">
+                        <p className="text-red-600 dark:text-red-400 text-sm font-medium mb-2">
+                          ⚠️ Unable to open Gmail
+                        </p>
+                        <p className="text-red-600/80 dark:text-red-400/80 text-xs">
+                          Your browser may have blocked the popup. Please allow popups for this site or email us directly at <a href="mailto:Events@innovoramind.com" className="underline font-semibold">Events@innovoramind.com</a>
+                        </p>
+                      </div>
                     )}
                   </form>
                 </motion.div>

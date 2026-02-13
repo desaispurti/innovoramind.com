@@ -112,7 +112,12 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   }
 }
@@ -150,7 +155,7 @@
   .border-gradient {
     border: 2px solid transparent;
     background: linear-gradient(var(--card), var(--card)) padding-box,
-                linear-gradient(135deg, hsl(210 100% 55%), hsl(175 80% 45%)) border-box;
+      linear-gradient(135deg, hsl(210 100% 55%), hsl(175 80% 45%)) border-box;
   }
 
   .animate-float {
@@ -164,6 +169,14 @@
   .animate-gradient {
     background-size: 200% 200%;
     animation: gradient-shift 8s ease infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-shine {
+    animation: shine 2s linear infinite;
   }
 }
 
@@ -191,17 +204,59 @@
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px hsl(210 100% 50% / 0.3); }
-  50% { box-shadow: 0 0 40px hsl(210 100% 50% / 0.5), 0 0 60px hsl(175 80% 45% / 0.3); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px hsl(210 100% 50% / 0.3);
+  }
+
+  50% {
+    box-shadow: 0 0 40px hsl(210 100% 50% / 0.5), 0 0 60px hsl(175 80% 45% / 0.3);
+  }
 }
 
 @keyframes gradient-shift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
 }

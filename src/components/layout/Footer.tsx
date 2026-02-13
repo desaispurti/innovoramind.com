@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube, Facebook } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import logo from '@/assets/logo.png';
 import seal from '@/assets/seal.png';
 
@@ -31,27 +31,14 @@ export const Footer = () => {
                 <p>Albuquerque, NM 87110, USA</p>
               </div>
             </div>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 hover:bg-secondary flex items-center justify-center transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-            </div>
+
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="font-display font-semibold text-lg mb-6">Quick Links</h4>
             <ul className="space-y-3">
-              {['Solutions', 'Proceedings', 'Registrations', 'Funding & Grants'].map((item) => (
+              {['Solutions', 'Registrations', 'Funding & Grants'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase().replace(/ /g, '-')}`}
@@ -108,15 +95,15 @@ export const Footer = () => {
             © {currentYear} InnovoraMind. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
+            <Link to="/privacy-policy" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
               Privacy Policy
-            </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
+            </Link>
+            <Link to="/terms-of-service" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
               Terms of Service
-            </a>
-            <a href="#" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
+            </Link>
+            <Link to="/cookie-policy" className="text-primary-foreground/60 hover:text-secondary transition-colors text-sm">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

@@ -14,9 +14,9 @@ const mainNavItems = [{
 }, {
   label: 'Funding & Grants',
   path: '/funding-grants'
-}, {
-  label: 'Proceedings',
-  path: '/proceedings'
+  // }, {
+  //   label: 'Proceedings',
+  //   path: '/proceedings'
 }, {
   label: 'Registrations',
   path: '/registrations'
@@ -54,7 +54,7 @@ export const Navbar = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 group z-50 relative">
-              <img src={seal} alt="Seal" className="h-10 w-auto" />
+              <img src={seal} alt="Seal" className="h-14 w-auto" />
               <span className="font-display font-bold text-lg text-foreground hidden sm:block">
                 Innovora<span className="text-gradient">Mind LLC</span>
               </span>

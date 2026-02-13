@@ -15,29 +15,67 @@ const Contact = () => {
     setStatus('submitting');
 
     const formData = new FormData(e.currentTarget);
-    // You can get a free access key from https://web3forms.com/
-    formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const subject = formData.get('subject') as string;
+    const message = formData.get('message') as string;
 
     try {
-      // Simulate API call for now, or use a real service like Web3Forms
-      // For a real implementation, uncomment below:
-      /*
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-      const data = await response.json();
-      if (data.success) {
-        setStatus('success');
-      } else {
-        setStatus('error');
-      }
-      */
+      // Create professional email template
+      const emailSubject = `[Contact Form] ${subject}`;
+      const emailBody = `Dear InnovoraMind Team,
 
-      // Mocking success for demonstration of the professional flow
-      await new Promise(resolve => setTimeout(resolve, 1500));
+I am reaching out through your website contact form with the following inquiry:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CONTACT INFORMATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Name: ${name}
+Email: ${email}
+Subject: ${subject}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+MESSAGE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+${message}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+I look forward to hearing from you soon.
+
+Best regards,
+${name}
+
+---
+This message was sent via the InnovoraMind contact form.
+Timestamp: ${new Date().toLocaleString('en-US', {
+        dateStyle: 'full',
+        timeStyle: 'long',
+        timeZone: 'America/Denver'
+      })}`;
+
+      // Encode the email components for URL
+      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=Events@innovoramind.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+
+      // Simulate brief processing time for better UX
+      await new Promise(resolve => setTimeout(resolve, 800));
+
+      // Try to open Gmail in new tab
+      const gmailWindow = window.open(mailtoLink, '_blank');
+
+      // Check if popup was blocked
+      if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
+        // Popup was blocked - show error
+        setStatus('error');
+        return;
+      }
+
+      // Show success message
       setStatus('success');
     } catch (error) {
+      console.error('Error opening Gmail:', error);
       setStatus('error');
     }
   };
@@ -170,9 +208,14 @@ const Contact = () => {
                       </Button>
 
                       {status === 'error' && (
-                        <p className="text-red-500 text-sm text-center font-medium">
-                          There was an error sending your message. Please try again.
-                        </p>
+                        <div className="p-4 bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-800 rounded-xl">
+                          <p className="text-red-600 dark:text-red-400 text-sm font-medium mb-2">
+                            ⚠️ Unable to open Gmail
+                          </p>
+                          <p className="text-red-600/80 dark:text-red-400/80 text-xs">
+                            Your browser may have blocked the popup. Please allow popups for this site or email us directly at <a href="mailto:Events@innovoramind.com" className="underline font-semibold">Events@innovoramind.com</a>
+                          </p>
+                        </div>
                       )}
                     </form>
                   </motion.div>

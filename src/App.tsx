@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import FundingGrants from "./pages/FundingGrants";
 // import UpcomingConferences from "./pages/UpcomingConferences";
 // import RecentConferences from "./pages/RecentConferences";
-import Proceedings from "./pages/Proceedings";
+// import Proceedings from "./pages/Proceedings";
 // import PastSpeakers from "./pages/PastSpeakers";
 // import AdvisorySpeakers from "./pages/AdvisorySpeakers";
 import Registrations from "./pages/Registrations";
@@ -16,6 +16,9 @@ import TechInnovation from "./pages/TechInnovation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Solutions from "./pages/Solutions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfService from "./pages/TermsOfService";
+import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import ICDMS26 from "./pages/conferences/ICDMS26";
 import VideoConferenceView from "./pages/VideoConferenceView";
@@ -38,7 +41,7 @@ const App = () => (
           <Route path="/funding-grants" element={<FundingGrants />} />
           {/* <Route path="/upcoming-conferences" element={<UpcomingConferences />} /> */}
           {/* <Route path="/recent-conferences" element={<RecentConferences />} /> */}
-          <Route path="/proceedings" element={<Proceedings />} />
+          {/* <Route path="/proceedings" element={<Proceedings />} /> */}
           {/* <Route path="/past-speakers" element={<PastSpeakers />} /> */}
           {/* <Route path="/advisory-speakers" element={<AdvisorySpeakers />} /> */}
           <Route path="/registrations" element={<Registrations />} />
@@ -48,7 +51,10 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/conferences/icdms-26" element={<ICDMS26 />} />
           <Route path="/solutions" element={<Solutions />} />
-          <Route path="/proceedings/:id" element={<VideoConferenceView />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          {/* <Route path="/proceedings/:id" element={<VideoConferenceView />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
