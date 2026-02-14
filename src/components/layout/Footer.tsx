@@ -41,7 +41,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Quick Links</h4>
             <ul className="space-y-4">
-              {[{ label: 'Solutions', path: '/solutions' }, { label: 'Registrations', path: '/registrations' }, { label: 'Funding & Grants', path: '/funding-grants' }].map((item) => (
+              {[{ label: 'Solutions', path: '/solutions' }, { label: 'Services', path: '/services' }, { label: 'Registrations', path: '/registrations' }, { label: 'Funding & Grants', path: '/funding-grants' }].map((item) => (
                 <li key={item.label}>
                   <Link
                     to={item.path}

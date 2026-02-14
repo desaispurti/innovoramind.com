@@ -63,7 +63,7 @@ const solutions = [
         title: 'Research & Data Analytics',
         description: 'Turning raw data into actionable insights through advanced statistical modeling and Al-driven analytics platforms.',
         features: ['Big Data Processing', 'Real-time Analytics', 'Statistical Research', 'Business Visualization'],
-        image: 'https://images.unsplash.com/photo-1543286386-214ed333a92b?q=80&w=2000&auto=format&fit=crop',
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKxxQTd2U2c7cpDs5TW3vHsjFrUBDMloMkiA&s',
         gradient: 'from-cyan-600 to-blue-500'
     }
 ];

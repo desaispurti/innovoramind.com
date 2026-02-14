@@ -16,6 +16,7 @@ import TechInnovation from "./pages/TechInnovation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Solutions from "./pages/Solutions";
+import Services from "./pages/Services";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
@@ -51,6 +52,7 @@ const App = () => (
           <Route path="/contact" element={<Contact />} />
           <Route path="/conferences/icdms-26" element={<ICDMS26 />} />
           <Route path="/solutions" element={<Solutions />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
