@@ -197,9 +197,9 @@ const PrivacyPolicy = () => {
                                         Our privacy team is here to help. Contact us for any questions or concerns.
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                                        <a href="mailto:Events@innovoramind.com" className="inline-flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/90 text-white rounded-full font-semibold transition-colors">
+                                        <a href="mailto:operations@innovoramind.com" className="inline-flex items-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary/90 text-white rounded-full font-semibold transition-colors">
                                             <Mail className="w-4 h-4" />
-                                            Events@innovoramind.com
+                                            operations@innovoramind.com
                                         </a>
                                     </div>
                                 </div>

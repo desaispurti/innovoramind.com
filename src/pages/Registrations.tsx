@@ -92,7 +92,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
       })}`;
 
       // Encode the email components for URL
-      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=Events@innovoramind.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=operations@innovoramind.com&su=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
       // Simulate brief processing time for better UX
       await new Promise(resolve => setTimeout(resolve, 800));
@@ -309,7 +309,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
                           ⚠️ Unable to open Gmail
                         </p>
                         <p className="text-red-600/80 dark:text-red-400/80 text-xs">
-                          Your browser may have blocked the popup. Please allow popups for this site or email us directly at <a href="mailto:Events@innovoramind.com" className="underline font-semibold">Events@innovoramind.com</a>
+                          Your browser may have blocked the popup. Please allow popups for this site or email us directly at <a href="mailto:operations@innovoramind.com" className="underline font-semibold">operations@innovoramind.com</a>
                         </p>
                       </div>
                     )}

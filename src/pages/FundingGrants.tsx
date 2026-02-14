@@ -406,7 +406,7 @@ const FundingGrants = () => {
                                     </div>
                                     <div>
                                         <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Email Support</div>
-                                        <div className="font-bold text-foreground">Events@innovoramind.com</div>
+                                        <div className="font-bold text-foreground">operations@innovoramind.com</div>
                                     </div>
                                 </div>
                                 <div className="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100">
