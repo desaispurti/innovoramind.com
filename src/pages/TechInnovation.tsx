@@ -84,13 +84,13 @@ const TechInnovation = () => {
                             InnovoraMind is at the forefront of the technological revolution. We build enterprise-grade solutions that bridge the gap between cutting-edge research and real-world industrial application in AI, IT, and Software.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-8 h-14">
+                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-8 h-14 text-lg">
                                 <Link to="/solutions">
                                     Explore Our Solutions
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 h-14 backdrop-blur-sm">
+                            <Button asChild size="lg" className="border border-white/40 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 h-14 backdrop-blur-sm transition-all text-lg font-bold">
                                 <Link to="/contact">Get a Consultation</Link>
                             </Button>
                         </div>

@@ -46,15 +46,15 @@ const About = () => {
               </h2>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                InnovoraMind is a professionally driven technology and innovation platform established to support businesses, enterprises, and institutions across diverse industries. We operate at the intersection of technology excellence, innovation, and structured digital growth.
+                InnovoraMind LLC was founded with a clear purpose — to bring enterprise‑grade IT solutions, AI‑driven innovation, and digital transformation services to businesses worldwide. In 2026, we officially launched our IT services division, backed by a team of seasoned professionals with years of hands‑on experience across artificial intelligence, cloud architecture, data engineering, and cybersecurity.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Our core activities include delivering advanced IT solutions, building enterprise-grade software systems, providing AI-driven automation and digital transformation services, and supporting organizations in strengthening their technology infrastructure and global digital presence.
+                While our IT services are newly launched, the expertise behind them is anything but new. Our founding team has spent years building, deploying, and scaling enterprise systems for organizations across finance, government, healthcare, and technology sectors. Every solution we deliver carries that depth of knowledge and battle‑tested experience.
               </p>
 
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Through collaborative partnerships and structured processes, InnovoraMind aims to simplify complex technology challenges while maintaining rigor, transparency, and international standards.
+                Headquartered in New Mexico, USA, InnovoraMind is built on the belief that innovation should be accessible, reliable, and impactful. We combine the agility of a modern startup with the maturity and professionalism of a company that truly understands the landscape — because our team has been shaping it for years.
               </p>
             </motion.div>
 

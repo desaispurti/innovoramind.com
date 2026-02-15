@@ -66,7 +66,7 @@ export const CTASection = () => {
                     <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="h-14 px-8 border-white/20 text-white hover:bg-white/5 font-semibold text-lg rounded-xl backdrop-blur-sm transition-all">
+                <Button asChild size="lg" className="h-14 px-8 border border-white/40 bg-white/10 text-white hover:bg-white/20 font-bold text-lg rounded-xl backdrop-blur-sm transition-all">
                   <Link to="/solutions">
                     Explore Solutions
                   </Link>

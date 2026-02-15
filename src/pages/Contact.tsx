@@ -127,7 +127,7 @@ Timestamp: ${new Date().toLocaleString('en-US', {
                     <Mail className="w-6 h-6 text-secondary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground text-lg">Direct Email</h3>
+                    <h3 className="font-semibold text-foreground text-lg">Mail</h3>
                     <p className="text-muted-foreground font-medium">operations@innovoramind.com</p>
                   </div>
                 </div>

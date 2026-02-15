@@ -158,13 +158,13 @@ const FundingGrants = () => {
                             Submit your proposals for evaluation and potential grant support.
                         </p>
                         <div className="flex flex-col sm:flex-row justify-center gap-4">
-                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-10 h-16 shadow-xl transform hover:scale-105 transition-all">
+                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-10 h-16 shadow-xl transform hover:scale-105 transition-all text-lg">
                                 <Link to="/contact">
                                     Submit Your Funding Proposal
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full px-10 h-16 backdrop-blur-sm">
+                            <Button asChild size="lg" className="border border-white/40 bg-white/10 text-white hover:bg-white/20 rounded-full px-10 h-16 backdrop-blur-sm transition-all text-lg font-bold">
                                 <Link to="/contact">Explore Opportunities</Link>
                             </Button>
                         </div>
@@ -409,15 +409,7 @@ const FundingGrants = () => {
                                         <div className="font-bold text-foreground">operations@innovoramind.com</div>
                                     </div>
                                 </div>
-                                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white shadow-sm border border-slate-100">
-                                    <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
-                                        <ExternalLink className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <div className="text-xs font-bold text-slate-400 uppercase tracking-widest">Official Website</div>
-                                        <div className="font-bold text-foreground">innovoramind.com</div>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

@@ -103,7 +103,7 @@ const ICDMS26 = () => {
                                     Explore Conference
                                 </a>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="border-white/20 hover:bg-white/10 text-white px-8 py-6 text-lg">
+                            <Button asChild size="lg" className="border border-white/40 bg-white/10 hover:bg-white/20 text-white px-8 py-6 text-lg font-bold backdrop-blur-sm transition-all">
                                 <Link to="/registrations">
                                     Register Now
                                 </Link>

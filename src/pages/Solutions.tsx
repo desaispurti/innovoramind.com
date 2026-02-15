@@ -94,13 +94,13 @@ const Solutions = () => {
                             InnovoraMind LLC™ provides specialized IT, Software, and AI-driven solutions tailored for modern enterprises. We bridge the gap between complex technology and business success.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
-                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-8 h-14">
+                            <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-8 h-14 text-lg">
                                 <Link to="/contact">
                                     Schedule a Consultation
                                     <ArrowRight className="ml-2 w-5 h-5" />
                                 </Link>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 h-14 backdrop-blur-sm">
+                            <Button asChild size="lg" className="border border-white/40 bg-white/10 text-white hover:bg-white/20 rounded-full px-8 h-14 backdrop-blur-sm transition-all text-lg font-bold">
                                 <Link to="/about">Our Expertise</Link>
                             </Button>
                         </div>
@@ -238,10 +238,10 @@ const Solutions = () => {
                                 Let's discuss how our AI and IT solutions can drive your business forward.
                             </p>
                             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-                                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-10 h-16 shadow-xl transform hover:scale-105 transition-all">
+                                <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-10 h-16 shadow-xl transform hover:scale-105 transition-all text-lg">
                                     <Link to="/contact">Get in Touch</Link>
                                 </Button>
-                                <Button asChild variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10 rounded-full px-10 h-16 backdrop-blur-sm">
+                                <Button asChild size="lg" className="border border-white/40 bg-white/10 text-white hover:bg-white/20 rounded-full px-10 h-16 backdrop-blur-sm transition-all text-lg font-bold">
                                     <Link to="/about">Our Story</Link>
                                 </Button>
                             </div>
