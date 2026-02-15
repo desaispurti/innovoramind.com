@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Play, Calendar, Users, Globe2, Cpu, Code, Bot, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import seal from '@/assets/seal.png';
 
 export const HeroSection = () => {
   const scrollToServices = () => {
@@ -30,10 +31,35 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center lg:text-left"
           >
+            {/* Prominent Company Logo & Name */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.15, duration: 0.7, type: 'spring', bounce: 0.35 }}
+              className="flex flex-col items-center lg:items-start gap-4 mb-8"
+            >
+              <div className="relative group">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-secondary/40 to-accent/40 rounded-full blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
+                <img
+                  src={seal}
+                  alt="InnovoraMind LLC Logo"
+                  className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-2 border-primary-foreground/20 shadow-2xl bg-white/10 backdrop-blur-sm"
+                />
+              </div>
+              <div className="text-center lg:text-left">
+                <h2 className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground tracking-tight">
+                  Innovora<span className="text-gradient">Mind LLC™</span>
+                </h2>
+                <p className="text-sm sm:text-base text-primary-foreground/60 font-medium tracking-wide mt-1">
+                  Technology-Driven Research & Knowledge Solutions
+                </p>
+              </div>
+            </motion.div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.3 }}
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm font-medium text-primary-foreground/90 mb-6"
             >
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />

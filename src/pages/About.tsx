@@ -97,30 +97,13 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
+      {/* Vision & Mission Section */}
       <section className="section-padding bg-muted/30">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-            {/* Mission Card */}
+            {/* Vision Card — Left */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="bg-card p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300"
-            >
-              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
-                <Target className="w-8 h-8" />
-              </div>
-              <h3 className="font-display text-2xl font-bold text-secondary mb-4">Our Mission</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                To create a reliable, structured, and inclusive technology ecosystem that empowers businesses and professionals to build high-quality digital solutions, drive innovation responsibly, and achieve meaningful technological advancement at national and global levels.
-              </p>
-            </motion.div>
-
-            {/* Vision Card */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -131,7 +114,24 @@ const About = () => {
               </div>
               <h3 className="font-display text-2xl font-bold text-secondary mb-4">Our Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be a globally trusted technology platform that bridges innovation, engineering, and professional collaboration—enabling ideas to evolve into impactful solutions that advance business, technology, and society.
+                To become a globally recognized technology leader that shapes the future of digital innovation — where every business, regardless of size or geography, has access to world-class AI, cloud, and IT solutions that unlock limitless growth and societal progress.
+              </p>
+            </motion.div>
+
+            {/* Mission Card — Right */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="bg-card p-8 rounded-2xl shadow-lg border border-border hover:shadow-xl transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 text-secondary">
+                <Target className="w-8 h-8" />
+              </div>
+              <h3 className="font-display text-2xl font-bold text-secondary mb-4">Our Mission</h3>
+              <p className="text-muted-foreground leading-relaxed">
+                To deliver enterprise-grade IT services, AI-powered automation, and scalable digital transformation solutions — built on deep industry expertise, rigorous engineering standards, and a commitment to empowering businesses with technology that is reliable, secure, and future-ready.
               </p>
             </motion.div>
           </div>
