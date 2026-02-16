@@ -31,30 +31,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="text-center lg:text-left"
           >
-            {/* Prominent Company Logo & Name */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.15, duration: 0.7, type: 'spring', bounce: 0.35 }}
-              className="flex flex-col items-center lg:items-start gap-4 mb-8"
-            >
-              <div className="relative group">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-secondary/40 to-accent/40 rounded-full blur-xl opacity-60 group-hover:opacity-100 transition-opacity duration-500 animate-pulse-glow" />
-                <img
-                  src={seal}
-                  alt="InnovoraMind LLC Logo"
-                  className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-full object-cover border-2 border-primary-foreground/20 shadow-2xl bg-white/10 backdrop-blur-sm"
-                />
-              </div>
-              <div className="text-center lg:text-left">
-                <h2 className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground tracking-tight">
-                  Innovora<span className="text-gradient">Mind LLC</span>
-                </h2>
-                <p className="text-sm sm:text-base text-primary-foreground/60 font-medium tracking-wide mt-1">
-                  Technology-Driven Research & Knowledge Solutions
-                </p>
-              </div>
-            </motion.div>
+
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -81,7 +58,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-primary-foreground/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              InnovoraMind LLC is an enterprise technology and research partner delivering advanced IT solutions, AI-driven automation, software systems, and digital transformation for industries and institutions worldwide.
+              We are an enterprise technology and research partner delivering advanced IT solutions, AI-driven automation, software systems, and digital transformation for industries and institutions worldwide.
             </motion.p>
 
             <motion.div

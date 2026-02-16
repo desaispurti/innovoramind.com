@@ -55,7 +55,7 @@ export const CTASection = () => {
               </h2>
 
               <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed">
-                Join InnovoraMind at the forefront of technological innovation.
+                Join us at the forefront of technological innovation.
                 We deliver scalable solutions that empower global enterprises to define the future.
               </p>
 

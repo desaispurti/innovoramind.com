@@ -29,10 +29,27 @@ export const Navbar = () => {
       className="fixed top-0 left-0 right-0 z-50 glass border-b border-border/50"
     >
       <nav className="container-custom">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
-            <img src={seal} alt="Seal" className="h-12 lg:h-14 w-auto" />
+          <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
+            <div className="relative w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
+              {/* Rotating Gradient Ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-full bg-gradient-to-r from-secondary via-accent to-primary opacity-80 group-hover:opacity-100"
+              />
+              {/* Inner Circle to create ring effect */}
+              <div className="absolute inset-[4px] bg-white dark:bg-slate-950 rounded-full flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-105">
+                <img
+                  src={seal}
+                  alt="InnovoraMind Logo"
+                  className="h-16 lg:h-20 w-auto rounded-full"
+                />
+              </div>
+              {/* Subtle Glow */}
+              <div className="absolute inset-0 rounded-full bg-secondary/20 blur-xl animate-pulse" />
+            </div>
             <div className="hidden sm:flex flex-col">
               <span className="font-display font-bold text-lg text-foreground leading-tight">
                 Innovora<span className="text-gradient">Mind LLC</span>
