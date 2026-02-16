@@ -59,7 +59,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Resources</h4>
             <ul className="space-y-4">
-              {[{ label: 'Tech Innovation', path: '/tech-innovation' }, { label: 'About Us', path: '/about' }, { label: 'Contact', path: '/contact' }].map((item) => (
+              {[{ label: 'Tech Innovation', path: '/tech-innovation' }, { label: 'About Us', path: '/about' }, { label: 'Careers', path: '/careers' }, { label: 'Contact', path: '/contact' }].map((item) => (
                 <li key={item.label}>
                   <Link
                     to={item.path}

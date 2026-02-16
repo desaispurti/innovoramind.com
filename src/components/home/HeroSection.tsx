@@ -48,7 +48,7 @@ export const HeroSection = () => {
               </div>
               <div className="text-center lg:text-left">
                 <h2 className="font-display text-2xl sm:text-3xl font-bold text-primary-foreground tracking-tight">
-                  Innovora<span className="text-gradient">Mind LLC™</span>
+                  Innovora<span className="text-gradient">Mind LLC</span>
                 </h2>
                 <p className="text-sm sm:text-base text-primary-foreground/60 font-medium tracking-wide mt-1">
                   Technology-Driven Research & Knowledge Solutions
@@ -81,7 +81,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="text-lg sm:text-xl text-primary-foreground/70 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
-              InnovoraMind LLC™ is an enterprise technology and research partner delivering advanced IT solutions, AI-driven automation, software systems, and digital transformation for industries and institutions worldwide.
+              InnovoraMind LLC is an enterprise technology and research partner delivering advanced IT solutions, AI-driven automation, software systems, and digital transformation for industries and institutions worldwide.
             </motion.p>
 
             <motion.div

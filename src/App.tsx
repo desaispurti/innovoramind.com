@@ -22,6 +22,7 @@ import TermsOfService from "./pages/TermsOfService";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import ICDMS26 from "./pages/conferences/ICDMS26";
+import Careers from "./pages/Careers";
 import VideoConferenceView from "./pages/VideoConferenceView";
 import { ScrollToTop } from "./components/ScrollToTop";
 import NewMexicoBackground from "./components/NewMexicoBackground";
@@ -55,6 +56,7 @@ const App = () => (
           <Route path="/services" element={<Services />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* <Route path="/proceedings/:id" element={<VideoConferenceView />} /> */}
           <Route path="*" element={<NotFound />} />

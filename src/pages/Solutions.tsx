@@ -91,7 +91,7 @@ const Solutions = () => {
                             Transforming Ideas into <span className="text-secondary">Digital Reality</span>
                         </h1>
                         <p className="text-xl text-white/80 mb-10 leading-relaxed">
-                            InnovoraMind LLC™ provides specialized IT, Software, and AI-driven solutions tailored for modern enterprises. We bridge the gap between complex technology and business success.
+                            InnovoraMind LLC provides specialized IT, Software, and AI-driven solutions tailored for modern enterprises. We bridge the gap between complex technology and business success.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4">
                             <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-bold rounded-full px-8 h-14 text-lg">
