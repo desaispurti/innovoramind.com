@@ -4,6 +4,7 @@ import { Target, Eye } from 'lucide-react';
 import certificateImg from '@/assets/certificate.png';
 
 import walidaImg from '@/assets/advisors/advisor-1.png';
+import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
 
 const About = () => {
   return (
@@ -118,60 +119,87 @@ const About = () => {
             </h2>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="grid md:grid-cols-5 gap-12 items-center">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+              {/* Dr. Walida Ounruean */}
               <motion.div
-                initial={{ opacity: 0, scale: 0.8, x: -50 }}
-                whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, type: "spring" }}
-                className="md:col-span-2 relative group"
+                transition={{ duration: 0.8 }}
+                className="space-y-8"
               >
-                {/* Premium Frame for Photo */}
-                <div className="absolute -inset-4 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2.5rem] opacity-30 blur-2xl group-hover:opacity-50 transition-opacity duration-500" />
-
-                <div className="relative">
-                  <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-2xl z-20" />
-                  <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
-
-                  <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-2xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                    <img
-                      src={walidaImg}
-                      alt="Dr. Walida Ounruean"
-                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative group max-w-md mx-auto lg:mx-0">
+                  <div className="absolute -inset-4 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-2xl z-20" />
+                    <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
+                    <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                      <img
+                        src={walidaImg}
+                        alt="Dr. Walida Ounruean"
+                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                      />
+                    </div>
                   </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="font-display text-3xl font-bold text-foreground">
+                      Dr. Walida Ounruean
+                    </h3>
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-bold text-xs tracking-wider uppercase">
+                      Executive Director, InnovoraMind LLC
+                    </div>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence and technological innovation. With years of experience in curriculum development and instruction, she bridges the gap between theoretical research and practical industry applications.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Under her guidance, InnovoraMind has established itself as a hub for digital transformation, fostering growth through AI-driven strategies and enterprise-grade software solutions.
+                  </p>
                 </div>
               </motion.div>
 
+              {/* Ezinne Esther Arisa */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="md:col-span-3 space-y-6"
+                className="space-y-8"
               >
-                <div className="space-y-2">
-                  <h3 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
-                    Dr. Walida Ounruean
-                  </h3>
-                  <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-bold text-sm tracking-wider uppercase">
-                    Executive Director, InnovoraMind LLC
+                <div className="relative group max-w-md mx-auto lg:mx-0">
+                  <div className="absolute -inset-4 bg-gradient-to-tr from-accent via-secondary to-accent rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-accent rounded-tl-2xl z-20" />
+                    <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-secondary rounded-br-2xl z-20" />
+                    <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                      <img
+                        src={ezinneImg}
+                        alt="Ezinne Esther Arisa"
+                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                      />
+                    </div>
                   </div>
                 </div>
 
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence and technological innovation. With years of experience in curriculum development and instruction, she bridges the gap between theoretical research and practical industry applications.
-                </p>
-
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Under her guidance, InnovoraMind has established itself as a hub for digital transformation, fostering growth through AI-driven strategies and enterprise-grade software solutions while maintaining a commitment to educational and professional advancement.
-                </p>
-
-                <div className="pt-4 flex gap-4">
-                  <div className="h-0.5 w-12 bg-secondary" />
-                  <div className="h-0.5 w-12 bg-accent opacity-50" />
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="font-display text-3xl font-bold text-foreground">
+                      Ezinne Esther Arisa
+                    </h3>
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent font-bold text-xs tracking-wider uppercase">
+                      Independent Director
+                    </div>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Ezinne Esther Arisa serves as an Independent Director, bringing strategic leadership and governance expertise. Her visionary approach helps guide the company's long-term objectives while ensuring robust operational standards and ethical innovation.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    With a strong background in tech-driven growth, she plays a pivotal role in shaping InnovoraMind's global strategy, fostering collaborations that drive social impact and digital excellence.
+                  </p>
                 </div>
               </motion.div>
             </div>
