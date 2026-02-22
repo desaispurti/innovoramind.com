@@ -5,7 +5,7 @@ import certificateImg from '@/assets/certificate.png';
 
 import walidaImg from '@/assets/advisors/advisor-1.png';
 import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
-import syamImg from '@/assets/advisors/syam-kumar.jpg';
+import firasImg from '@/assets/advisors/Dr firas.jpeg';
 
 const About = () => {
   return (
@@ -101,7 +101,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership Section */}
+      {/* Leadership & Advisory Section */}
       <section className="section-padding bg-muted/20 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
@@ -118,134 +118,146 @@ const About = () => {
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
               Our <span className="text-secondary text-gradient">Leadership</span>
             </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              The visionaries and strategic minds driving InnovoraMind's global mission forward.
+            </p>
           </motion.div>
 
-          <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-10">
-              {/* Dr. Walida Ounruean */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="space-y-8"
-              >
-                <div className="relative group max-w-md mx-auto lg:mx-0">
-                  <div className="absolute -inset-4 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
-                  <div className="relative">
-                    <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-2xl z-20" />
-                    <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
-                    <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                      <img
-                        src={walidaImg}
-                        alt="Dr. Walida Ounruean"
-                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                      />
-                    </div>
-                  </div>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
 
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="font-display text-3xl font-bold text-foreground">
-                      Dr. Walida Ounruean
-                    </h3>
-                    <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-bold text-xs tracking-wider uppercase">
-                      Executive Director, InnovoraMind LLC
-                    </div>
+            {/* Card: Dr. Walida Ounruean */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7 }}
+              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group"
+            >
+              <div className="relative w-full">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-xl z-20" />
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-accent rounded-br-xl z-20" />
+                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                    <img
+                      src={walidaImg}
+                      alt="Dr. Walida Ounruean"
+                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                    />
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence and technological innovation. With years of experience in curriculum development and instruction, she bridges the gap between theoretical research and practical industry applications.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Under her guidance, InnovoraMind has established itself as a hub for digital transformation, fostering growth through AI-driven strategies and enterprise-grade software solutions.
-                  </p>
                 </div>
-              </motion.div>
+              </div>
+              <div className="space-y-2 w-full">
+                <h3 className="font-display text-xl font-bold text-foreground">Dr. Walida Ounruean</h3>
+                <div className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-[11px] tracking-widest uppercase">
+                  Executive Director
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
+                  Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence and technological innovation. She bridges the gap between theoretical research and practical industry applications, fostering AI-driven growth and enterprise-grade digital solutions.
+                </p>
+              </div>
+            </motion.div>
 
-              {/* Ezinne Esther Arisa */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-8"
-              >
-                <div className="relative group max-w-md mx-auto lg:mx-0">
-                  <div className="absolute -inset-4 bg-gradient-to-tr from-accent via-secondary to-accent rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
-                  <div className="relative">
-                    <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-accent rounded-tl-2xl z-20" />
-                    <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-secondary rounded-br-2xl z-20" />
-                    <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                      <img
-                        src={ezinneImg}
-                        alt="Ezinne Esther Arisa"
-                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                      />
-                    </div>
+            {/* Card: Ezinne Esther Arisa */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group"
+            >
+              <div className="relative w-full">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-accent via-secondary to-accent rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-accent rounded-tl-xl z-20" />
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-xl z-20" />
+                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                    <img
+                      src={ezinneImg}
+                      alt="Ezinne Esther Arisa"
+                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                    />
                   </div>
                 </div>
+              </div>
+              <div className="space-y-2 w-full">
+                <h3 className="font-display text-xl font-bold text-foreground">Ezinne Esther Arisa</h3>
+                <div className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent font-bold text-[11px] tracking-widest uppercase">
+                  Independent Director
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
+                  Ezinne Esther Arisa brings strategic leadership and governance expertise as an Independent Director. Her visionary approach guides InnovoraMind's long-term objectives and shapes the company's global strategy for digital excellence and societal impact.
+                </p>
+              </div>
+            </motion.div>
 
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="font-display text-3xl font-bold text-foreground">
-                      Ezinne Esther Arisa
-                    </h3>
-                    <div className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent font-bold text-xs tracking-wider uppercase">
-                      Independent Director
-                    </div>
+            {/* Card: Dr. Firas Zeidan */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group md:col-span-2 lg:col-span-1 md:mx-auto"
+            >
+              <div className="relative w-full">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-xl z-20" />
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-accent rounded-br-xl z-20" />
+                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                    <img
+                      src={firasImg}
+                      alt="Dr. Firas Zeidan"
+                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                    />
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Ezinne Esther Arisa serves as an Independent Director, bringing strategic leadership and governance expertise. Her visionary approach helps guide the company's long-term objectives while ensuring robust operational standards and ethical innovation.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    With a strong background in tech-driven growth, she plays a pivotal role in shaping InnovoraMind's global strategy, fostering collaborations that drive social impact and digital excellence.
-                  </p>
                 </div>
-              </motion.div>
+              </div>
+              <div className="space-y-2 w-full">
+                <h3 className="font-display text-xl font-bold text-foreground">Dr. Firas Zeidan</h3>
+                <div className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-[11px] tracking-widest uppercase">
+                  Advisory Board Member
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
+                  Dr. Firas Zeidan brings a wealth of expertise in technology leadership, strategic innovation, and academic research. He provides critical guidance on InnovoraMind's research agenda, industry partnerships, and long-term growth strategy.
+                </p>
+              </div>
+            </motion.div>
 
-              {/* Syam Kumar Gajula */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="space-y-8"
-              >
-                <div className="relative group max-w-md mx-auto lg:mx-0">
-                  <div className="absolute -inset-4 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
-                  <div className="relative">
-                    <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-2xl z-20" />
-                    <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
-                    <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                      <img
-                        src={syamImg}
-                        alt="Syam Kumar Gajula"
-                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="font-display text-3xl font-bold text-foreground">
-                      Syam Kumar Gajula
-                    </h3>
-                    <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-bold text-xs tracking-wider uppercase">
-                      Independent Director
-                    </div>
-                  </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    Syam Kumar Gajula brings extensive expertise in technology strategy and enterprise solutions. As an Independent Director, he provides valuable insights into digital transformation, helping InnovoraMind stay at the forefront of AI and cloud innovation.
-                  </p>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
-                    His commitment to excellence and innovation drives the company's mission to deliver high-impact technology services that empower businesses to thrive in an increasingly digital world.
-                  </p>
-                </div>
-              </motion.div>
-            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Dr. Firas Zeidan — Message from the Advisory Board */}
+      <section className="section-padding bg-gradient-to-br from-secondary/5 via-background to-accent/10 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary rounded-full blur-[120px]" />
+        </div>
+        <div className="container-custom relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-3xl mx-auto text-center"
+          >
+            <p className="text-sm font-bold tracking-[0.25em] uppercase text-secondary mb-6">
+              Message from the Advisory Board
+            </p>
+            <p className="text-5xl text-secondary/30 font-serif leading-none select-none mb-4">&#8220;</p>
+            <p className="text-xl sm:text-2xl font-medium text-foreground leading-relaxed italic">
+              Innovation is not just about technology — it is about people, purpose, and perseverance. I am proud to partner with InnovoraMind in its mission to democratize access to world-class AI and digital solutions, and to help shape a future where technology truly serves humanity.
+            </p>
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <div className="w-14 h-14 rounded-full overflow-hidden border-4 border-secondary shadow-lg shrink-0">
+                <img src={firasImg} alt="Dr. Firas Zeidan" className="w-full h-full object-cover" />
+              </div>
+              <div className="text-left">
+                <p className="font-bold text-foreground text-base">Dr. Firas Zeidan</p>
+                <p className="text-sm text-muted-foreground">Advisory Board Member, InnovoraMind</p>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
