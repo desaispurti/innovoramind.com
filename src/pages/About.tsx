@@ -228,8 +228,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Dr. Firas Zeidan — Message from the Advisory Board */}
-      <section className="section-padding bg-gradient-to-br from-secondary/5 via-background to-accent/10 relative overflow-hidden">
+      {/* Leadership Perspectives Section */}
+      <section className="section-padding bg-gradient-to-br from-secondary/5 via-background to-accent/5 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary rounded-full blur-[120px]" />
         </div>
@@ -239,25 +239,92 @@ const About = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="max-w-3xl mx-auto text-center"
+            className="text-center mb-16"
           >
-            <p className="text-sm font-bold tracking-[0.25em] uppercase text-secondary mb-6">
-              Message from the Advisory Board
+            <p className="text-sm font-bold tracking-[0.25em] uppercase text-secondary mb-4">
+              Leadership Perspectives
             </p>
-            <p className="text-5xl text-secondary/30 font-serif leading-none select-none mb-4">&#8220;</p>
-            <p className="text-xl sm:text-2xl font-medium text-foreground leading-relaxed italic">
-              Innovation is not just about technology — it is about people, purpose, and perseverance. I am proud to partner with InnovoraMind in its mission to democratize access to world-class AI and digital solutions, and to help shape a future where technology truly serves humanity.
-            </p>
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <div className="w-14 h-14 rounded-full overflow-hidden border-4 border-secondary shadow-lg shrink-0">
-                <img src={firasImg} alt="Dr. Firas Zeidan" className="w-full h-full object-cover" />
-              </div>
-              <div className="text-left">
-                <p className="font-bold text-foreground text-base">Dr. Firas Zeidan</p>
-                <p className="text-sm text-muted-foreground">Advisory Board Member, InnovoraMind</p>
-              </div>
-            </div>
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-foreground">
+              Voices of <span className="text-gradient">Innovation</span>
+            </h2>
           </motion.div>
+
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Dr. Walida Ounruean Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Technology is most powerful when it is rooted in academic excellence and practical purpose. We are not just building software; we are cultivating an ecosystem of sustainable innovation that bridges the gap between today's challenges and tomorrow's possibilities.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
+                  <img src={walidaImg} alt="Dr. Walida Ounruean" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Walida Ounruean</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Executive Director</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Ezinne Esther Arisa Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-accent/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  True digital transformation requires more than just high-end tools — it demands strategic vision and ethical governance. Our goal is to empower organizations with technology that is not only cutting-edge but also responsible, inclusive, and fundamentally impactful.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent shadow-md shrink-0">
+                  <img src={ezinneImg} alt="Ezinne Esther Arisa" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Ezinne Esther Arisa</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Independent Director</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Dr. Firas Zeidan Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Innovation is not just about technology — it is about people, purpose, and perseverance. I am proud to partner with InnovoraMind in its mission to democratize access to world-class AI and digital solutions, and to help shape a future where technology truly serves humanity.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
+                  <img src={firasImg} alt="Dr. Firas Zeidan" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Firas Zeidan</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Advisory Board Member</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
