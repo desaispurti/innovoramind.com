@@ -5,6 +5,7 @@ import certificateImg from '@/assets/certificate.png';
 
 import walidaImg from '@/assets/advisors/advisor-1.png';
 import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
+import syamImg from '@/assets/advisors/syam-kumar.jpg';
 
 const About = () => {
   return (
@@ -120,7 +121,7 @@ const About = () => {
           </motion.div>
 
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-10">
               {/* Dr. Walida Ounruean */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -199,6 +200,47 @@ const About = () => {
                   </p>
                   <p className="text-lg text-muted-foreground leading-relaxed">
                     With a strong background in tech-driven growth, she plays a pivotal role in shaping InnovoraMind's global strategy, fostering collaborations that drive social impact and digital excellence.
+                  </p>
+                </div>
+              </motion.div>
+
+              {/* Syam Kumar Gajula */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="space-y-8"
+              >
+                <div className="relative group max-w-md mx-auto lg:mx-0">
+                  <div className="absolute -inset-4 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2.5rem] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-500" />
+                  <div className="relative">
+                    <div className="absolute -top-3 -left-3 w-12 h-12 border-t-4 border-l-4 border-secondary rounded-tl-2xl z-20" />
+                    <div className="absolute -bottom-3 -right-3 w-12 h-12 border-b-4 border-r-4 border-accent rounded-br-2xl z-20" />
+                    <div className="relative rounded-[2rem] overflow-hidden border-8 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                      <img
+                        src={syamImg}
+                        alt="Syam Kumar Gajula"
+                        className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <h3 className="font-display text-3xl font-bold text-foreground">
+                      Syam Kumar Gajula
+                    </h3>
+                    <div className="inline-block px-4 py-1.5 rounded-full bg-secondary/10 text-secondary font-bold text-xs tracking-wider uppercase">
+                      Independent Director
+                    </div>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Syam Kumar Gajula brings extensive expertise in technology strategy and enterprise solutions. As an Independent Director, he provides valuable insights into digital transformation, helping InnovoraMind stay at the forefront of AI and cloud innovation.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    His commitment to excellence and innovation drives the company's mission to deliver high-impact technology services that empower businesses to thrive in an increasingly digital world.
                   </p>
                 </div>
               </motion.div>
