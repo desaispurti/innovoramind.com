@@ -7,7 +7,7 @@ import { Calendar, MapPin, Globe, User, Users, ArrowRight, CheckCircle } from 'l
 // import nadiaAdnan from '@/assets/speakers/nadia-adnan.png';
 // import ranaElKhawand from '@/assets/speakers/rana-el-khawand.png';
 import walidaOunruean from '@/assets/advisors/advisor-1.png';
-// import tianshengYang from '@/assets/speakers/tiansheng-yang.png';
+import tianshengYang from '@/assets/advisors/tiansheng.png';
 
 const speakers = [
     {
@@ -36,7 +36,7 @@ const speakers = [
         role: 'Senior Lecturer',
         department: 'School of Computing and Mathematics',
         institution: 'University of South Wales, United Kingdom',
-        image: '/speakers/Dr. Tiansheng Yang.png'
+        image: tianshengYang
     }
 ];
 

@@ -6,6 +6,8 @@ import certificateImg from '@/assets/certificate.png';
 import walidaImg from '@/assets/advisors/advisor-1.png';
 import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
 import firasImg from '@/assets/advisors/Dr firas.jpeg';
+import tianshengImg from '@/assets/advisors/tiansheng.png';
+
 
 const About = () => {
   return (
@@ -123,7 +125,7 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
 
             {/* Card: Dr. Walida Ounruean */}
             <motion.div
@@ -197,8 +199,9 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group md:col-span-2 lg:col-span-1 md:mx-auto"
+              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group"
             >
+
               <div className="relative w-full">
                 <div className="absolute -inset-2 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
                 <div className="relative">
@@ -223,6 +226,40 @@ const About = () => {
                 </p>
               </div>
             </motion.div>
+
+            {/* Card: Dr. Tiansheng Yang */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.45 }}
+              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group lg:col-span-1 md:mx-auto"
+            >
+              <div className="relative w-full">
+                <div className="absolute -inset-2 bg-gradient-to-tr from-accent via-secondary to-accent rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
+                <div className="relative">
+                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-accent rounded-tl-xl z-20" />
+                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-xl z-20" />
+                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
+                    <img
+                      src={tianshengImg}
+                      alt="Dr. Tiansheng Yang"
+                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-2 w-full">
+                <h3 className="font-display text-xl font-bold text-foreground">Dr. Tiansheng Yang</h3>
+                <div className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent font-bold text-[11px] tracking-widest uppercase">
+                  Advisory Board Member
+                </div>
+                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
+                  Dr. Tiansheng Yang is an esteemed Faculty Member at the University of South Wales, United Kingdom. He brings extensive academic insight and research leadership to InnovoraMind, specializing in digital transformation and educational innovation.
+                </p>
+              </div>
+            </motion.div>
+
 
           </div>
         </div>
@@ -249,7 +286,8 @@ const About = () => {
             </h2>
           </motion.div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
             {/* Dr. Walida Ounruean Quote */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -324,7 +362,33 @@ const About = () => {
                 </div>
               </div>
             </motion.div>
+
+            {/* Dr. Tiansheng Yang Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between lg:mt-0"
+            >
+              <div>
+                <p className="text-4xl text-accent/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Digital transformation is not merely a technical shift, but a profound evolution in how we learn, innovate, and create value. At InnovoraMind, we are shaping this future through rigorous academic standards and visionary technological leadership.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent shadow-md shrink-0">
+                  <img src={tianshengImg} alt="Dr. Tiansheng Yang" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Tiansheng Yang</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Advisory Board Member</p>
+                </div>
+              </div>
+            </motion.div>
           </div>
+
         </div>
       </section>
 
