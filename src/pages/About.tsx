@@ -4,6 +4,7 @@ import { Target, Eye } from 'lucide-react';
 import certificateImg from '@/assets/certificate.png';
 
 import walidaImg from '@/assets/advisors/advisor-1.png';
+import joeImg from '@/assets/advisors/advisor-2.png';
 import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
 import firasImg from '@/assets/advisors/Dr firas.jpeg';
 import tianshengImg from '@/assets/advisors/tiansheng.png';
@@ -125,142 +126,79 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-
-            {/* Card: Dr. Walida Ounruean */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group"
-            >
-              <div className="relative w-full">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
-                <div className="relative">
-                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-xl z-20" />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-accent rounded-br-xl z-20" />
-                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                    <img
-                      src={walidaImg}
-                      alt="Dr. Walida Ounruean"
-                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                    />
+          <div className="grid md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-12 md:gap-y-20 max-w-5xl mx-auto px-4">
+            {[
+              {
+                name: "Dr. Joe Perez",
+                role: "Strategy Director",
+                image: joeImg,
+                bio: "Dr. Joe Perez is a tech powerhouse with 40+ years of experience. An international keynote speaker and Amazon best-selling author, he brings world-class data strategy to InnovoraMind.",
+                color: "secondary"
+              },
+              {
+                name: "Dr. Walida Ounruean",
+                role: "Executive Director",
+                image: walidaImg,
+                bio: "Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence. She bridges the gap between research and practical industry applications, fostering AI-driven growth.",
+                color: "accent"
+              },
+              {
+                name: "Ezinne Esther Arisa",
+                role: "Independent Director",
+                image: ezinneImg,
+                bio: "Ezinne Esther Arisa brings strategic leadership and governance expertise. Her visionary approach guides InnovoraMind's long-term objectives and shapes our global digital strategy.",
+                color: "secondary"
+              },
+              {
+                name: "Dr. Firas Zeidan",
+                role: "Advisory Board Member",
+                image: firasImg,
+                bio: "Dr. Firas Zeidan provides critical guidance on InnovoraMind's research agenda and industry partnerships, drawing from his deep expertise in technology leadership and innovation.",
+                color: "accent"
+              },
+              {
+                name: "Dr. Tiansheng Yang",
+                role: "Advisory Board Member",
+                image: tianshengImg,
+                bio: "Dr. Tiansheng Yang is an esteemed Faculty Member at the University of South Wales, UK. He specializes in digital transformation and research leadership for educational innovation.",
+                color: "secondary"
+              }
+            ].map((member, idx) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: idx * 0.1 }}
+                className={`w-full max-w-[360px] mx-auto flex flex-col items-center text-center gap-4 bg-card rounded-[2rem] border border-border shadow-md hover:shadow-xl transition-all duration-500 p-6 group relative ${idx === 4 ? 'md:col-span-2 md:mt-10' : (idx % 2 === 1 ? 'md:mt-16' : '')
+                  }`}
+              >
+                <div className="relative w-full max-w-[280px]">
+                  <div className={`absolute -inset-1.5 bg-gradient-to-tr ${member.color === 'secondary' ? 'from-secondary via-accent to-secondary' : 'from-accent via-secondary to-accent'
+                    } rounded-[1.75rem] opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-500`} />
+                  <div className="relative">
+                    <div className={`absolute -top-1.5 -left-1.5 w-6 h-6 border-t-3 border-l-3 ${member.color === 'secondary' ? 'border-secondary' : 'border-accent'} rounded-tl-lg z-20`} />
+                    <div className={`absolute -bottom-1.5 -right-1.5 w-6 h-6 border-b-3 border-r-3 ${member.color === 'secondary' ? 'border-accent' : 'border-secondary'} rounded-br-lg z-20`} />
+                    <div className={`relative rounded-[1.5rem] overflow-hidden border-3 border-white shadow-lg ${idx % 2 === 0 ? 'skew-y-1' : '-skew-y-1'} group-hover:skew-y-0 transition-transform duration-500`}>
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="space-y-2 w-full">
-                <h3 className="font-display text-xl font-bold text-foreground">Dr. Walida Ounruean</h3>
-                <div className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-[11px] tracking-widest uppercase">
-                  Executive Director
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
-                  Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence and technological innovation. She bridges the gap between theoretical research and practical industry applications, fostering AI-driven growth and enterprise-grade digital solutions.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Card: Ezinne Esther Arisa */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.15 }}
-              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group"
-            >
-              <div className="relative w-full">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-accent via-secondary to-accent rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
-                <div className="relative">
-                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-accent rounded-tl-xl z-20" />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-xl z-20" />
-                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                    <img
-                      src={ezinneImg}
-                      alt="Ezinne Esther Arisa"
-                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                    />
+                <div className="space-y-1.5 w-full">
+                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">{member.name}</h3>
+                  <div className={`inline-block px-3 py-0.5 rounded-full ${member.color === 'secondary' ? 'bg-secondary/10 text-secondary' : 'bg-accent/10 text-accent'} font-bold text-[10px] tracking-widest uppercase`}>
+                    {member.role}
                   </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
+                    {member.bio}
+                  </p>
                 </div>
-              </div>
-              <div className="space-y-2 w-full">
-                <h3 className="font-display text-xl font-bold text-foreground">Ezinne Esther Arisa</h3>
-                <div className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent font-bold text-[11px] tracking-widest uppercase">
-                  Independent Director
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
-                  Ezinne Esther Arisa brings strategic leadership and governance expertise as an Independent Director. Her visionary approach guides InnovoraMind's long-term objectives and shapes the company's global strategy for digital excellence and societal impact.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Card: Dr. Firas Zeidan */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.3 }}
-              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group"
-            >
-
-              <div className="relative w-full">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-secondary via-accent to-secondary rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
-                <div className="relative">
-                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-secondary rounded-tl-xl z-20" />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-accent rounded-br-xl z-20" />
-                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                    <img
-                      src={firasImg}
-                      alt="Dr. Firas Zeidan"
-                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-2 w-full">
-                <h3 className="font-display text-xl font-bold text-foreground">Dr. Firas Zeidan</h3>
-                <div className="inline-block px-3 py-1 rounded-full bg-secondary/10 text-secondary font-bold text-[11px] tracking-widest uppercase">
-                  Advisory Board Member
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
-                  Dr. Firas Zeidan brings a wealth of expertise in technology leadership, strategic innovation, and academic research. He provides critical guidance on InnovoraMind's research agenda, industry partnerships, and long-term growth strategy.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Card: Dr. Tiansheng Yang */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.45 }}
-              className="w-full max-w-sm flex flex-col items-center text-center gap-5 bg-card rounded-3xl border border-border shadow-lg hover:shadow-2xl transition-all duration-500 p-6 group lg:col-span-1 md:mx-auto"
-            >
-              <div className="relative w-full">
-                <div className="absolute -inset-2 bg-gradient-to-tr from-accent via-secondary to-accent rounded-[2rem] opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500" />
-                <div className="relative">
-                  <div className="absolute -top-2 -left-2 w-8 h-8 border-t-4 border-l-4 border-accent rounded-tl-xl z-20" />
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-4 border-r-4 border-secondary rounded-br-xl z-20" />
-                  <div className="relative rounded-[1.75rem] overflow-hidden border-4 border-white shadow-xl -skew-y-1 group-hover:skew-y-0 transition-transform duration-500">
-                    <img
-                      src={tianshengImg}
-                      alt="Dr. Tiansheng Yang"
-                      className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-2 w-full">
-                <h3 className="font-display text-xl font-bold text-foreground">Dr. Tiansheng Yang</h3>
-                <div className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent font-bold text-[11px] tracking-widest uppercase">
-                  Advisory Board Member
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
-                  Dr. Tiansheng Yang is an esteemed Faculty Member at the University of South Wales, United Kingdom. He brings extensive academic insight and research leadership to InnovoraMind, specializing in digital transformation and educational innovation.
-                </p>
-              </div>
-            </motion.div>
-
-
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -286,7 +224,32 @@ const About = () => {
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
+
+            {/* Dr. Joe Perez Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  I'm a firm believer that if I'm not innovating, then I'm stagnating! Strategy is the bridge that connects visionary thinking to impactful reality for the digital age.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
+                  <img src={joeImg} alt="Dr. Joe Perez" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Joe Perez</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Strategy Director</p>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Dr. Walida Ounruean Quote */}
             <motion.div
@@ -299,7 +262,7 @@ const About = () => {
               <div>
                 <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
                 <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
-                  Technology is most powerful when it is rooted in academic excellence and practical purpose. We are not just building software; we are cultivating an ecosystem of sustainable innovation that bridges the gap between today's challenges and tomorrow's possibilities.
+                  Technology is most powerful when it is rooted in academic excellence and practical purpose. We are cultivating an ecosystem of sustainable innovation that bridges today's challenges and tomorrow's possibilities.
                 </p>
               </div>
               <div className="flex items-center gap-4">
@@ -324,7 +287,7 @@ const About = () => {
               <div>
                 <p className="text-4xl text-accent/20 font-serif leading-none select-none mb-4">&#8220;</p>
                 <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
-                  True digital transformation requires more than just high-end tools — it demands strategic vision and ethical governance. Our goal is to empower organizations with technology that is not only cutting-edge but also responsible, inclusive, and fundamentally impactful.
+                  True digital transformation requires more than just high-end tools — it demands strategic vision and ethical governance. Our goal is to empower organizations with technology that is responsible, inclusive, and fundamentally impactful.
                 </p>
               </div>
               <div className="flex items-center gap-4">
@@ -349,7 +312,7 @@ const About = () => {
               <div>
                 <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
                 <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
-                  Innovation is not just about technology — it is about people, purpose, and perseverance. I am proud to partner with InnovoraMind in its mission to democratize access to world-class AI and digital solutions, and to help shape a future where technology truly serves humanity.
+                  Innovation is about people, purpose, and perseverance. I am proud to partner with InnovoraMind in its mission to democratize access to world-class AI solutions and to help shape a future where technology truly serves humanity.
                 </p>
               </div>
               <div className="flex items-center gap-4">
@@ -369,12 +332,12 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between lg:mt-0"
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between md:col-span-2 md:max-w-xl md:mx-auto"
             >
               <div>
                 <p className="text-4xl text-accent/20 font-serif leading-none select-none mb-4">&#8220;</p>
                 <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
-                  Digital transformation is not merely a technical shift, but a profound evolution in how we learn, innovate, and create value. At InnovoraMind, we are shaping this future through rigorous academic standards and visionary technological leadership.
+                  Digital transformation is not merely a technical shift, but a profound evolution in how we learn, innovate, and create value. At InnovoraMind, we are shaping this future through rigorous academic standards and visionary leadership.
                 </p>
               </div>
               <div className="flex items-center gap-4">

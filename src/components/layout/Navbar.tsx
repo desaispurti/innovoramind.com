@@ -7,11 +7,11 @@ import seal from '@/assets/seal.png';
 
 const navItems = [
   { label: 'Home', path: '/' },
+  { label: 'About Us', path: '/about' },
   { label: 'Services', path: '/services' },
   { label: 'Solutions', path: '/solutions' },
   { label: 'Funding & Grants', path: '/funding-grants' },
   { label: 'Tech Innovation', path: '/tech-innovation' },
-  { label: 'About Us', path: '/about' },
   { label: 'Careers', path: '/careers' },
   { label: 'Contact', path: '/contact' },
 ];
