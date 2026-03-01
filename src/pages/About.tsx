@@ -126,7 +126,17 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-x-8 lg:gap-x-12 gap-y-12 md:gap-y-20 max-w-5xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-x-8 lg:gap-x-16 gap-y-12 md:gap-y-16 max-w-5xl mx-auto px-4 relative">
+            {/* Shared Team Connection Pattern (Subtle background element) */}
+            <div className="absolute inset-0 opacity-[0.03] pointer-events-none hidden md:block">
+              <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                <defs><pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+                  <path d="M25 0 L50 14.4 L50 43.4 L25 57.8 L0 43.4 L0 14.4 Z" fill="none" stroke="currentColor" strokeWidth="1" />
+                </pattern></defs>
+                <rect width="100%" height="100%" fill="url(#hexagons)" />
+              </svg>
+            </div>
+
             {[
               {
                 name: "Dr. Joe Perez",
@@ -166,34 +176,37 @@ const About = () => {
             ].map((member, idx) => (
               <motion.div
                 key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: idx * 0.1 }}
-                className={`w-full max-w-[360px] mx-auto flex flex-col items-center text-center gap-4 bg-card rounded-[2rem] border border-border shadow-md hover:shadow-xl transition-all duration-500 p-6 group relative ${idx === 4 ? 'md:col-span-2 md:mt-10' : (idx % 2 === 1 ? 'md:mt-16' : '')
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className={`w-full max-w-[360px] mx-auto flex flex-col items-center text-center gap-4 bg-card/80 backdrop-blur-sm rounded-[2.5rem] border border-border/50 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 p-7 group relative ${idx === 4 ? 'md:col-span-2 md:max-w-[400px]' : ''
                   }`}
               >
                 <div className="relative w-full max-w-[280px]">
-                  <div className={`absolute -inset-1.5 bg-gradient-to-tr ${member.color === 'secondary' ? 'from-secondary via-accent to-secondary' : 'from-accent via-secondary to-accent'
-                    } rounded-[1.75rem] opacity-20 blur-lg group-hover:opacity-40 transition-opacity duration-500`} />
+                  {/* Unified Ring Element */}
+                  <div className={`absolute -inset-2 bg-gradient-to-tr ${member.color === 'secondary' ? 'from-secondary/20 via-accent/20 to-secondary/20' : 'from-accent/20 via-secondary/20 to-accent/20'
+                    } rounded-full opacity-40 blur-xl group-hover:opacity-70 transition-opacity duration-500`} />
+
                   <div className="relative">
-                    <div className={`absolute -top-1.5 -left-1.5 w-6 h-6 border-t-3 border-l-3 ${member.color === 'secondary' ? 'border-secondary' : 'border-accent'} rounded-tl-lg z-20`} />
-                    <div className={`absolute -bottom-1.5 -right-1.5 w-6 h-6 border-b-3 border-r-3 ${member.color === 'secondary' ? 'border-accent' : 'border-secondary'} rounded-br-lg z-20`} />
-                    <div className={`relative rounded-[1.5rem] overflow-hidden border-3 border-white shadow-lg ${idx % 2 === 0 ? 'skew-y-1' : '-skew-y-1'} group-hover:skew-y-0 transition-transform duration-500`}>
+                    {/* Consistent Modern Frame */}
+                    <div className={`relative rounded-3xl overflow-hidden border-2 border-white/50 shadow-2xl transition-all duration-500 group-hover:rounded-[2.5rem]`}>
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full object-cover group-hover:scale-105 transition-transform duration-700 aspect-[4/5]"
+                        className="w-full object-cover group-hover:scale-110 transition-transform duration-700 aspect-[4/5]"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="space-y-1.5 w-full">
-                  <h3 className="font-display text-lg sm:text-xl font-bold text-foreground">{member.name}</h3>
-                  <div className={`inline-block px-3 py-0.5 rounded-full ${member.color === 'secondary' ? 'bg-secondary/10 text-secondary' : 'bg-accent/10 text-accent'} font-bold text-[10px] tracking-widest uppercase`}>
+
+                <div className="space-y-2 w-full">
+                  <h3 className="font-display text-xl sm:text-2xl font-bold text-foreground group-hover:text-secondary transition-colors">{member.name}</h3>
+                  <div className={`inline-block px-4 py-1 rounded-full ${member.color === 'secondary' ? 'bg-secondary/10 text-secondary' : 'bg-accent/10 text-accent'} font-bold text-[11px] tracking-widest uppercase`}>
                     {member.role}
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed pt-1 text-left">
+                  <div className="h-px w-12 bg-gradient-to-r from-transparent via-border to-transparent mx-auto mt-2" />
+                  <p className="text-sm text-muted-foreground leading-relaxed pt-2 text-center md:text-left px-2">
                     {member.bio}
                   </p>
                 </div>
