@@ -8,6 +8,7 @@ import joeImg from '@/assets/advisors/advisor-2.png';
 import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
 import firasImg from '@/assets/advisors/Dr firas.jpeg';
 import tianshengImg from '@/assets/advisors/tiansheng.png';
+import katarzynaImg from '@/assets/advisors/katarzyna.png';
 
 
 const About = () => {
@@ -139,6 +140,13 @@ const About = () => {
 
             {[
               {
+                name: "Dr. Walida Ounruean",
+                role: "Director",
+                image: walidaImg,
+                bio: "Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence. She bridges the gap between research and practical industry applications, fostering AI-driven growth.",
+                color: "accent"
+              },
+              {
                 name: "Dr. Joe Perez",
                 role: "Strategy Director",
                 image: joeImg,
@@ -146,18 +154,18 @@ const About = () => {
                 color: "secondary"
               },
               {
-                name: "Dr. Walida Ounruean",
-                role: "Executive Director",
-                image: walidaImg,
-                bio: "Dr. Walida Ounruean leads InnovoraMind with a focus on academic excellence. She bridges the gap between research and practical industry applications, fostering AI-driven growth.",
-                color: "accent"
-              },
-              {
                 name: "Ezinne Esther Arisa",
                 role: "Independent Director",
                 image: ezinneImg,
                 bio: "Ezinne Esther Arisa brings strategic leadership and governance expertise. Her visionary approach guides InnovoraMind's long-term objectives and shapes our global digital strategy.",
                 color: "secondary"
+              },
+              {
+                name: "Dr. Katarzyna Antosz",
+                role: "Board Member",
+                image: katarzynaImg,
+                bio: "Dr. Katarzyna Antosz is a distinguished Board Member at InnovoraMind, providing strategic oversight and expertise to drive innovation and excellence in digital transformation.",
+                color: "accent"
               },
               {
                 name: "Dr. Firas Zeidan",
@@ -180,8 +188,7 @@ const About = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
-                className={`w-full max-w-[360px] mx-auto flex flex-col items-center text-center gap-4 bg-card/80 backdrop-blur-sm rounded-[2.5rem] border border-border/50 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 p-7 group relative ${idx === 4 ? 'md:col-span-2 md:max-w-[400px]' : ''
-                  }`}
+                className={`w-full max-w-[360px] mx-auto flex flex-col items-center text-center gap-4 bg-card/80 backdrop-blur-sm rounded-[2.5rem] border border-border/50 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-500 p-7 group relative`}
               >
                 <div className="relative w-full max-w-[280px]">
                   {/* Unified Ring Element */}
@@ -239,6 +246,31 @@ const About = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
 
+            {/* Dr. Walida Ounruean Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Technology is most powerful when it is rooted in academic excellence and practical purpose. We are cultivating an ecosystem of sustainable innovation that bridges today's challenges and tomorrow's possibilities.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
+                  <img src={walidaImg} alt="Dr. Walida Ounruean" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Walida Ounruean</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Director</p>
+                </div>
+              </div>
+            </motion.div>
+
             {/* Dr. Joe Perez Quote */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -264,31 +296,6 @@ const About = () => {
               </div>
             </motion.div>
 
-            {/* Dr. Walida Ounruean Quote */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
-            >
-              <div>
-                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
-                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
-                  Technology is most powerful when it is rooted in academic excellence and practical purpose. We are cultivating an ecosystem of sustainable innovation that bridges today's challenges and tomorrow's possibilities.
-                </p>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
-                  <img src={walidaImg} alt="Dr. Walida Ounruean" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <p className="font-bold text-foreground text-sm">Dr. Walida Ounruean</p>
-                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Executive Director</p>
-                </div>
-              </div>
-            </motion.div>
-
             {/* Ezinne Esther Arisa Quote */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -310,6 +317,31 @@ const About = () => {
                 <div>
                   <p className="font-bold text-foreground text-sm">Ezinne Esther Arisa</p>
                   <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Independent Director</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Dr. Katarzyna Antosz Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Innovation thrives at the intersection of strategic foresight and technical excellence. At InnovoraMind, we are committed to building resilient digital foundations that empower businesses to lead in an ever-evolving global landscape.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
+                  <img src={katarzynaImg} alt="Dr. Katarzyna Antosz" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Katarzyna Antosz</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Board Member</p>
                 </div>
               </div>
             </motion.div>
@@ -345,7 +377,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between md:col-span-2 md:max-w-xl md:mx-auto"
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
             >
               <div>
                 <p className="text-4xl text-accent/20 font-serif leading-none select-none mb-4">&#8220;</p>
