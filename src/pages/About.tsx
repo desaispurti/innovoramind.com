@@ -4,6 +4,7 @@ import { Target, Eye } from 'lucide-react';
 import certificateImg from '@/assets/certificate.png';
 
 import walidaImg from '@/assets/advisors/advisor-1.png';
+import ratnaImg from '@/assets/advisors/ratna.png';
 import joeImg from '@/assets/advisors/advisor-2.png';
 import ezinneImg from '@/assets/advisors/advisor-6.jpeg';
 import firasImg from '@/assets/advisors/Dr firas.jpeg';
@@ -147,6 +148,13 @@ const About = () => {
                 color: "accent"
               },
               {
+                name: "Dr. Ratna Raja Kumar Jambi",
+                role: "Director",
+                image: ratnaImg,
+                bio: "Dr. Ratna Raja Kumar Jambi, representing G S Moze College of Engineering, India, brings highly distinguished academic and research leadership to InnovoraMind, steering advanced technological innovations.",
+                color: "secondary"
+              },
+              {
                 name: "Dr. Joe Perez",
                 role: "Strategy Director",
                 image: joeImg,
@@ -266,6 +274,31 @@ const About = () => {
                 </div>
                 <div>
                   <p className="font-bold text-foreground text-sm">Dr. Walida Ounruean</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Director</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Dr. Ratna Raja Kumar Jambi Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-secondary/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Engineering education and scientific inquiry form the bedrock of digital advancement. Our commitment is to foster cutting-edge research that translates into impactful, real-world technologies.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-secondary shadow-md shrink-0">
+                  <img src={ratnaImg} alt="Dr. Ratna Raja Kumar Jambi" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Dr. Ratna Raja Kumar Jambi</p>
                   <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Director</p>
                 </div>
               </div>

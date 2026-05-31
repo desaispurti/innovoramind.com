@@ -3,6 +3,7 @@ import { Layout } from '@/components/layout/Layout';
 import { ShieldCheck, Compass, Scale, Globe } from 'lucide-react';
 
 import walidaImg   from '@/assets/advisors/advisor-1.png';
+import ratnaImg    from '@/assets/advisors/ratna.png';
 import joeImg      from '@/assets/advisors/advisor-2.png';
 import ezinneImg   from '@/assets/advisors/advisor-6.jpeg';
 import firasImg    from '@/assets/advisors/Dr firas.jpeg';
@@ -41,6 +42,13 @@ const boardMembers = [
     affiliation: 'Innovora Mind LLC, New Mexico, USA',
     expertise: 'AI-Driven Digital Transformation, Academic Governance',
     image: walidaImg,
+  },
+  {
+    name: 'Dr. Ratna Raja Kumar Jambi',
+    designation: 'Director & Senior Research Fellow',
+    affiliation: 'G S Moze College of Engineering, India',
+    expertise: 'Advanced Engineering, Academic Leadership, Technical Innovations',
+    image: ratnaImg,
   },
   {
     name: 'Dr. Joe Perez',
