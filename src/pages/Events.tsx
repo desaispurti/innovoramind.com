@@ -1,58 +1,51 @@
 import { motion } from 'framer-motion';
 import { Layout } from '@/components/layout/Layout';
 import { Link } from 'react-router-dom';
-import { Calendar, MapPin, Video, ArrowRight, MonitorPlay, Cpu, Code, Shield, Cloud, Database } from 'lucide-react';
+import { Calendar, MapPin, Video, ArrowRight, Code, MessageCircle, Layers } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 
-const conferences = [
+interface Conference {
+  id: string;
+  title: string;
+  shortDesc: string;
+  tag: string;
+  date: string;
+  location: string;
+  mode: string;
+  icon: LucideIcon;
+  registrationLink?: string;
+}
+
+const conferences: Conference[] = [
   {
-    id: "iccsd",
-    title: "International Conference on Cyber Security & Defense (ICCSD)",
-    shortDesc: "Securing the Future: Resilience, Strategies, and Innovations in Digital Defense.",
-    tag: "Cyber Security",
-    date: "April 19, 2026",
-    location: "Location TBA",
-    mode: "Hybrid Mode",
-    icon: Shield,
+    id: "hackathon-2026",
+    title: "Nexus 2026",
+    shortDesc: "A Hackathon focusing on exciting projects on the combination of various domains like AI, Data Science, Cloud, Cybersecurity, and Machine Learning.",
+    tag: "Hackathon",
+    date: "June 7, 2026",
+    location: "Online",
+    mode: "Virtual",
+    icon: Code
   },
   {
-    id: "gsai",
-    title: "Global Summit on Artificial Intelligence (GSAI)",
-    shortDesc: "Unveiling the Next Era of Generative AI, Machine Learning, and Neural Networks.",
-    tag: "Artificial Intelligence",
-    date: "May 17, 2026",
-    location: "Location TBA",
-    mode: "Hybrid Mode",
-    icon: Cpu,
+    id: "fireside-chat-agi-ethics",
+    title: "The Ethics of AGI",
+    shortDesc: "An exclusive, unstructured Ask-Me-Anything (AMA) session with leading AI safety researchers. Dive deep into the philosophical and technical guardrails needed for Artificial General Intelligence.",
+    tag: "Fireside Chat",
+    date: "June 14, 2026",
+    location: "Online",
+    mode: "Virtual",
+    icon: MessageCircle
   },
   {
-    id: "wccc",
-    title: "World Cloud Computing Congress (WCCC)",
-    shortDesc: "Building Scalable Infrastructures and Next-Gen Serverless Architectures.",
-    tag: "Cloud Computing",
-    date: "June 21, 2026",
-    location: "Location TBA",
-    mode: "Hybrid Mode",
-    icon: Cloud,
-  },
-  {
-    id: "icbt",
-    title: "International Conference on Blockchain Technologies (ICBT)",
-    shortDesc: "Decentralized Systems, Smart Contracts, and the Web3 Revolution.",
-    tag: "Blockchain & Web3",
-    date: "July 19, 2026",
-    location: "Location TBA",
-    mode: "Hybrid Mode",
-    icon: Code,
-  },
-  {
-    id: "idss",
-    title: "International Data Science Summit (IDSS)",
-    shortDesc: "Harnessing Analytics, Predictive Modeling, and Data Engineering At Scale.",
-    tag: "Data Science & Big Data",
-    date: "August 16, 2026",
-    location: "Location TBA",
-    mode: "Hybrid Mode",
-    icon: Database,
+    id: "design-sprint-spatial-ux",
+    title: "UX for Spatial Computing",
+    shortDesc: "Step away from the code. This rapid-prototyping sprint focuses purely on user experience, 3D interfaces, and accessibility for the next generation of AR/VR applications.",
+    tag: "Design Sprint",
+    date: "June 28, 2026",
+    location: "Online",
+    mode: "Virtual",
+    icon: Layers
   }
 ];
 
@@ -74,7 +67,7 @@ const Events = () => {
             className="max-w-4xl mx-auto"
           >
             <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6">
-              Technical <span className="text-gradient">Events</span>
+              Our <span className="text-gradient">Events</span>
             </h1>
             <p className="text-xl sm:text-2xl text-primary-foreground/80 font-medium">
               Join us for industry-leading conferences, summits, and technical workshops
@@ -93,10 +86,10 @@ const Events = () => {
             className="mb-12"
           >
             <h2 className="font-display text-3xl font-bold text-foreground mb-4">
-              Featured Conferences
+              Featured Events
             </h2>
             <p className="text-muted-foreground max-w-2xl">
-              Discover our upcoming conferences focused on pushing the boundaries of technology, artificial intelligence, cyber security, and more.
+              Discover our upcoming events focused on pushing the boundaries of technology, artificial intelligence, cyber security, and more.
             </p>
           </motion.div>
 
@@ -116,12 +109,12 @@ const Events = () => {
                     <div className="absolute inset-0 bg-grid-white/10 [mask-image:linear-gradient(0deg,transparent,black)]" />
                     <Icon className="w-20 h-20 text-secondary/40 group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute top-4 left-4">
-                       <span className="inline-flex items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-0.5 text-xs font-semibold text-secondary backdrop-blur-md">
+                      <span className="inline-flex items-center rounded-full border border-secondary/30 bg-secondary/10 px-2.5 py-0.5 text-xs font-semibold text-secondary backdrop-blur-md">
                         {conf.tag}
                       </span>
                     </div>
                   </div>
-                  
+
                   <div className="p-6 flex flex-col flex-grow">
                     <div className="mb-4">
                       <div className="flex justify-between items-start mb-2">
@@ -129,7 +122,7 @@ const Events = () => {
                           {conf.title}
                         </h3>
                       </div>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
+                      <p className="text-sm text-muted-foreground">
                         {conf.shortDesc}
                       </p>
                     </div>
@@ -149,13 +142,25 @@ const Events = () => {
                       </div>
                     </div>
 
-                    <Link
-                      to={`/events/${conf.id}`}
-                      className="inline-flex items-center justify-center w-full rounded-xl bg-secondary px-4 py-2.5 text-sm font-semibold text-secondary-foreground shadow-sm hover:bg-secondary/90 transition-colors"
-                    >
-                      View Details
-                      <ArrowRight className="ml-2 w-4 h-4" />
-                    </Link>
+                    {conf.registrationLink ? (
+                      <a
+                        href={conf.registrationLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-full rounded-xl bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90 transition-colors"
+                      >
+                        Register Now
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={`/events/${conf.id}`}
+                        className="inline-flex items-center justify-center w-full rounded-xl bg-secondary px-4 py-2.5 text-sm font-semibold text-secondary-foreground shadow-sm hover:bg-secondary/90 transition-colors"
+                      >
+                        View Details
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Link>
+                    )}
                   </div>
                 </motion.div>
               );
