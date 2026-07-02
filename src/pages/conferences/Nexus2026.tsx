@@ -31,6 +31,7 @@ import profAlexanderImg from '@/assets/image copy 24.png';
 import profElNamakiImg from '@/assets/image copy 25.png';
 import drShamilaImg from '@/assets/image copy 26.png';
 import amberImg from '@/assets/image copy 27.png';
+import awardWinnersImg from '@/assets/WhatsApp Image 2026-07-02 at 8.10.50 AM.jpeg';
 
 // Dynamically load all images added today for the glimpses section
 const glimpsesGlob = import.meta.glob('@/assets/WhatsApp Image 2026-06-29*.jpeg', { eager: true });
@@ -1054,6 +1055,36 @@ const Nexus2026 = () => {
                   </div>
                 </motion.div>
               ))}
+            </div>
+          </motion.div>
+
+          {/* Award Winners Section */}
+          <motion.div
+            id="award-winners"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-16 pt-10 border-t border-border/50"
+          >
+            <div className="flex flex-col items-center text-center space-y-4 mb-12">
+              <div className="inline-flex items-center rounded-full border border-secondary/50 bg-secondary/10 px-4 py-1.5 text-sm font-semibold text-secondary">
+                <Award className="w-4 h-4 mr-2" />
+                Recognition & Excellence
+              </div>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground">Nexus 2026 Award Winners</h2>
+              <p className="text-muted-foreground max-w-2xl text-lg">
+                Celebrating the outstanding achievements and contributions of our esteemed participants and visionaries.
+              </p>
+            </div>
+            
+            <div className="flex justify-center px-4 md:px-8 mb-16">
+              <div className="relative max-w-6xl w-full flex justify-center items-center drop-shadow-2xl hover:scale-[1.01] transition-transform duration-500">
+                <img 
+                  src={awardWinnersImg} 
+                  alt="Nexus 2026 Award Winners" 
+                  className="w-full h-auto max-h-[80vh] object-contain rounded-xl"
+                />
+              </div>
             </div>
           </motion.div>
 
