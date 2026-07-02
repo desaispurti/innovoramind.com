@@ -38,18 +38,18 @@ const glimpsesGlob = import.meta.glob('@/assets/WhatsApp Image 2026-06-29*.jpeg'
 const glimpseImages = Object.values(glimpsesGlob).map((module: any) => module.default);
 
 const videoGlimpseData = [
-  { id: "1i9Hmf7FRweQbqphm7M1JADgt3Ebzv00S", name: "Dr. Shamila Ahmed Hashi" },
-  { id: "1NJ37wXH300hUeMiD6SyP979IsPoGbiMq", name: "Mr. Amber Rastogi" },
-  { id: "1936wX8fLNSHXuq3uMy1gP71EqR_APiQP", name: "Mrugendra Madalagi" },
-  { id: "1BroEaDU2dj07oXPaaRJIvQRIweWqC0qH", name: "Prof. Dr. M.S.S. EI Namaki" },
-  { id: "1wDD8dJ6GDHenbT_q6jx0LLV4f8VcwWt7", name: "Navin Kumar Chhibber" },
-  { id: "1hAfoImPZANgxe-PeOGmZOVstiDtSkjE9", name: "Pankaj Arora" },
-  { id: "1CAWKdjoxfPl7Fpijp2bRZZ4BcHAtUNGk", name: "Shamal Chandrakant Bhole" },
-  { id: "1-aOdITfEFAebx7ZRCR1ex5a9ea9PwvSz", name: "Sri Harsha Anand Pushkala" },
-  { id: "1hI31X1_3HetDw_l9Xlh3Jc9wp53rRNDn", name: "Trupti Raikar" },
-  { id: "1VsbvsTLgidte1C2CJyXpquVGcm29zYwM", name: "Mani Tahriri" },
-  { id: "1_YsvGaY5h68KOUg45ACcnKStRNrP_Nfq", name: "Prof. Dr. Alexander Bull" },
-  { id: "10AXHWxYZPR3saFeVYZGmNj_FJsvzQwWo", name: "Fatimah Alneel" }
+  { id: "112r47Q99Drjvg2VSSYgmGyE_22IqchyS818Cg2BaVBE", name: "Dr. Shamila Ahmed Hashi" },
+  { id: "1YeJLgiP3kVk-bNxxpV3cd6IyPwjMIeeR2YE1SI_JotU", name: "Mr. Amber Rastogi" },
+  { id: "1NhiFLgn1GlRZD8V4b2iqfcrjLQUTiqQaDbqNdniEYyw", name: "Mrugendra Madalagi" },
+  { id: "1WklB3B6ap9Lf1NyCPD2MBL1varz5TDmVHY430P-GsXs", name: "Prof. Dr. M.S.S. EI Namaki" },
+  { id: "1Z7V_PF_wFV0_VOvWC44CifcWWiImVwJq2vUMmngIF6M", name: "Navin Kumar Chhibber" },
+  { id: "1tMLL9TRLl7FriKNcvUeHXNCYqG78-iJm44jG8igJj7E", name: "Pankaj Arora" },
+  { id: "1HieP_LYJVBg0M-oSXcT5j9OLPg-xRSyF5dDqI24uAlE", name: "Shamal Chandrakant Bhole" },
+  { id: "1lshh-tfhnwuj3dOIW4XOLEyPCYhb-IEB4itTt22Udvc", name: "Sri Harsha Anand Pushkala" },
+  { id: "1KjO82XaLFsjS7XDi1N7uKTOdKOumcXrdTrSSz20va3o", name: "Trupti Raikar" },
+  { id: "1KJNXW_TljNZFNBw3fK5UAeOVcIEU28InrnW1fu1DG6g", name: "Mani Tahriri" },
+  { id: "188910FwNwDP5vzIm-19s1FFSW9WQpfjgqh9h3Gh5oAA", name: "Prof. Dr. Alexander Bull" },
+  { id: "1G1pUfozEZWfPy8bKQEPLlvpAxXMOclDMRpIcWNwbFDg", name: "Fatimah Alneel" }
 ];
 
 const expertsData = [
