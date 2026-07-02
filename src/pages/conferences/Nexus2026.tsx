@@ -1043,7 +1043,7 @@ const Nexus2026 = () => {
                       <iframe
                         src={`https://drive.google.com/file/d/${video.id}/preview`}
                         className="w-full h-full border-0"
-                        allow="autoplay; fullscreen"
+                        allow="fullscreen"
                         title={video.name}
                       ></iframe>
                     </div>
