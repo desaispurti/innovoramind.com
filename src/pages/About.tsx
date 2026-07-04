@@ -11,6 +11,7 @@ import firasImg from '@/assets/advisors/Dr firas.jpeg';
 import tianshengImg from '@/assets/advisors/tiansheng.png';
 import katarzynaImg from '@/assets/advisors/katarzyna.png';
 import ratnaImg from '@/assets/advisors/ratna-raja-kumar.jpg';
+import aidaImg from '@/assets/advisors/aida-mehrad.jpeg';
 
 
 const About = () => {
@@ -196,6 +197,13 @@ const About = () => {
                 image: tianshengImg,
                 bio: "Dr. Tiansheng Yang is an esteemed Faculty Member at the University of South Wales, UK. He specializes in digital transformation and research leadership for educational innovation.",
                 color: "secondary"
+              },
+              {
+                name: "Aida Mehrad",
+                role: "Director of Innovation & Emerging Technologies",
+                image: aidaImg,
+                bio: "Aida Mehrad leads InnovoraMind's technological frontier, translating cutting-edge emerging technologies into scalable, impactful enterprise solutions that redefine the modern digital landscape.",
+                color: "accent"
               }
             ].map((member, idx) => (
               <motion.div
@@ -458,6 +466,31 @@ const About = () => {
                 <div>
                   <p className="font-bold text-foreground text-sm">Dr. Tiansheng Yang</p>
                   <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Advisory Board Member</p>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Aida Mehrad Quote */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.7 }}
+              className="bg-card/50 backdrop-blur-sm p-8 rounded-[2rem] border border-border shadow-xl flex flex-col justify-between"
+            >
+              <div>
+                <p className="text-4xl text-accent/20 font-serif leading-none select-none mb-4">&#8220;</p>
+                <p className="text-lg font-medium text-foreground leading-relaxed italic mb-8">
+                  Innovation is the relentless pursuit of better solutions. By embracing emerging technologies with an open and strategic mind, we can redefine what is possible and craft a resilient digital future.
+                </p>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-accent shadow-md shrink-0">
+                  <img src={aidaImg} alt="Aida Mehrad" className="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <p className="font-bold text-foreground text-sm">Aida Mehrad</p>
+                  <p className="text-[11px] text-muted-foreground uppercase tracking-wider font-semibold">Director of Innovation & Emerging Tech</p>
                 </div>
               </div>
             </motion.div>
