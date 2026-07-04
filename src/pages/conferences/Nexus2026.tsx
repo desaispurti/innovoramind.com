@@ -74,11 +74,6 @@ const expertsData = [
     "country": "Algérie"
   },
   {
-    "name": "Marghescu Cristina-Florentina",
-    "designation": "University Politehnica of Bucharest (UPB) / Research Delegate / Engineering & Technical Research",
-    "country": "Romania"
-  },
-  {
     "name": "DIAKITE SAMBA KANI",
     "designation": "Ministère de l'Environnement et du Développement Durable",
     "country": "Guinée"
@@ -205,14 +200,6 @@ const judgesData = [
     country: "Nigeria",
     image: profOlukemiImg,
     bio: "Professor involved in extensive academic and international research."
-  },
-  {
-    name: "Marghescu Cristina-Florentina",
-    organisation: "University Politehnica of Bucharest (UPB)",
-    designation: "PhD Researcher in Mathematics",
-    country: "Romania",
-    image: "/images/judges/cristina.jpeg",
-    bio: "PhD Researcher in Mathematics."
   },
   {
     name: "Pankaj Arora",
