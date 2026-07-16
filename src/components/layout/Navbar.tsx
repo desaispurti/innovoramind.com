@@ -16,6 +16,7 @@ const navItems = [
   // { label: 'Advisory Board', path: '/advisory-board' },
   { label: 'Careers', path: '/careers' },
   { label: 'Developers', path: '/developers' },
+  { label: 'Our Projects', path: '/projects' },
   { label: 'Contact', path: '/contact' },
 ];
 

@@ -25,6 +25,7 @@ import NotFound from "./pages/NotFound";
 import Careers from "./pages/Careers";
 import Developers from "./pages/Developers";
 import Documentation from "./pages/Documentation";
+import Projects from "./pages/Projects";
 import Events from "./pages/Events";
 import GASS from "./pages/conferences/GASS";
 import Nexus2026 from "./pages/conferences/Nexus2026";
@@ -82,6 +83,7 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/developers" element={<Developers />} />
           <Route path="/documentation" element={<Documentation />} />
+          <Route path="/projects" element={<Projects />} />
           {/* <Route path="/advisory-board" element={<AdvisoryBoard />} /> */}
           <Route path="/cookie-policy" element={<CookiePolicy />} />
           {/* <Route path="/proceedings/:id" element={<VideoConferenceView />} /> */}
