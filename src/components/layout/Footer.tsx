@@ -38,7 +38,7 @@ export const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <nav aria-label="Quick links">
             <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Quick Links</h4>
             <ul className="space-y-4">
               {[{ label: 'Solutions', path: '/solutions' }, { label: 'Services', path: '/services' }, { label: 'Registrations', path: '/registrations' }, { label: 'Funding & Grants', path: '/funding-grants' }].map((item) => (
@@ -53,10 +53,10 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Resources */}
-          <div>
+          <nav aria-label="Resources">
             <h4 className="text-sm font-bold uppercase tracking-widest text-slate-200 mb-8">Resources</h4>
             <ul className="space-y-4">
               {[{ label: 'Tech Innovation', path: '/tech-innovation' }, { label: 'About Us', path: '/about' }, { label: 'Careers', path: '/careers' }, { label: 'Contact', path: '/contact' }].map((item) => (
@@ -71,7 +71,7 @@ export const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
           {/* Contact */}
           <div>

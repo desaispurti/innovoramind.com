@@ -84,8 +84,9 @@ export const Navbar = () => {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="xl:hidden p-2.5 rounded-xl hover:bg-muted/60 transition-colors"
+            className="xl:hidden p-2.5 rounded-xl hover:bg-muted/60 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-secondary"
             aria-label="Toggle Menu"
+            aria-expanded={isOpen}
           >
             {isOpen ? (
               <X className="w-5 h-5 text-foreground" />

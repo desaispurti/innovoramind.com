@@ -59,7 +59,7 @@ const Projects = () => {
               transition={{ duration: 0.6 }}
               className="rounded-2xl overflow-hidden border border-border/50 shadow-xl"
             >
-              <img src="/images/project/foyer.png" alt="AI-SOC Overview" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
+              <img src="/images/project/foyer.png" alt="AI-SOC system overview and architecture foyer screen" loading="lazy" decoding="async" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -68,7 +68,7 @@ const Projects = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="rounded-2xl overflow-hidden border border-border/50 shadow-xl"
             >
-              <img src="/images/project/dash.png" alt="AI-SOC Dashboard" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
+              <img src="/images/project/dash.png" alt="AI-SOC real-time threat monitoring dashboard" loading="lazy" decoding="async" className="w-full h-auto hover:scale-105 transition-transform duration-700" />
             </motion.div>
           </div>
 

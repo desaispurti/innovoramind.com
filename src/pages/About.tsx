@@ -83,7 +83,9 @@ const About = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-white/10 via-transparent to-white/10 pointer-events-none" />
                 <img
                   src={certificateImg}
-                  alt="Certificate of Organization"
+                  alt="Certificate of Organization — InnovoraMind LLC, State of New Mexico"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-auto rounded-lg shadow-inner group-hover:scale-[1.02] transition-transform duration-700"
                 />
 
@@ -225,6 +227,8 @@ const About = () => {
                       <img
                         src={member.image}
                         alt={member.name}
+                        loading="lazy"
+                        decoding="async"
                         className="w-full object-cover group-hover:scale-110 transition-transform duration-700 aspect-[4/5]"
                       />
                     </div>

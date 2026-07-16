@@ -28,8 +28,7 @@ export const VideoShowcase = () => {
                 if (playPromise !== undefined) {
                     playPromise
                         .then(() => setIsPlaying(true))
-                        .catch(error => {
-                            console.log("Autoplay prevented:", error);
+                        .catch(() => {
                             setIsPlaying(false);
                         });
                 }
